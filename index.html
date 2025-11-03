@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>My Web Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome สำหรับ Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: "Segoe UI", sans-serif;
+            margin: 0;
+            color: #fff;
+            background: url('https://i.pinimg.com/originals/19/10/63/191063a8fc5a4da4eccdb6e406c52089.gif') 
+                        no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+        }
+
+        /* เลเยอร์โปร่งใสทับพื้นหลัง */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+            z-index: -1;
+        }
+
+        header {
+            background: rgba(0,0,0,0.7);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        nav {
+            background: rgba(0,0,0,0.6);
+            padding: 10px 0;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        section {
+            background: rgba(255,255,255,0.1);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .profile {
+            display: block;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .icon_profile {
+            display: block;
+            margin: 0 auto 10px;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        h1, h2 {
+            color: #fff;
+        }
+
+        p {
+            color: #ddd;
+            line-height: 1.6;
+            margin: 0 auto 20px;
+            max-width: 600px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .skill-badge {
+            background: rgba(255,255,255,0.15);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(4px);
+            text-decoration: none;
+        }
+
+        .skill-badge i {
+            font-size: 18px;
+            color: #00bfff;
+        }
+
+        .skill-badge:hover {
+            transform: translateY(-4px);
+            background: #00bfff;
+            color: white;
+        }
+
+        .skill-badge:hover i {
+            color: white;
+        }
+
+        .contact-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 80px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            background: rgba(255,255,255,0.15);
+            border-radius: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+            padding: 20px;
+            text-align: center;
+            width: 200px;
+            backdrop-filter: blur(6px);
+            transition: 0.3s;
+        }
+
+        .contact-item:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .contact-item p {
+            margin: 8px 0;
+            color: #fff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #ccc;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>🌐 My Portfolio</header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="work.html">ผลงานด้านวิชาการ</a>
+        <a href="working project-1.html">Project กำลังพัฒนา</a>
+        <a href="goodguys.html">พลเมืองดี</a>
+    </nav>
+
+    <section>
+        <img class="profile" src="https://i.postimg.cc/yd0bdBTR/0ef2ffce-faa4-4c3c-9b3b-83aef526c7e2.jpg" alt="รูปโปรไฟล์">
+        <h1>ดนัยเทพ แซ่ตั้ง</h1>
+        <p>กระผมนายดนัยเทพ แซ่ตั้ง ซื่อเล่นห่าน กำลังศึกษาที่โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ที่บ้านของผม ผู้ปกครองท่านซื้อคอมพิวเตอร์ให้ตั้งแต่ยังเด็ก ทำให้ผมมีความชื่นชอบและพยายามศึกษาหาข้อมูลเกี่ยวกับเทคโนโลยีคอมพิวเตอร์ แต่ทว่าผมมีความชื่นชอบแต่ไม่ใช้ความฝัน จนกระทั้งผมเจอ ยูทูบเบอร์คนหนึ่ง ตอน ม5 ทำให้เป็นมีความฝันและความตั้งใจ ยูทูบเบอร์คนนั้นคือคุณธนานนท์ ปฏิญญาศักดิกุล หรือ รู้จักในนามของ 9arm ผมได้มีฝัน และเริ่มทำตามความฝันโดย เริ่มจากการอ่านหนังสือจนสามารถติด สอวน. ได้ในปี 2567 จนถึงเข้าร่วมการอบรมค่าย 2 ถึงไม่สามารถเป็นผู้แทนศูนย์ได้ แต่ผมก็ยังศึกษาพัฒนาตัวเองต่อไป และนำความรู้ที่ผมได้รับไปปรับใช้และส่งต่อให้กับผู้อื่น ผมได้ทำช่อง ยูทูบ สอนเนื้อหาเทียบเท่ากับค่าย 2 ความรู้คอมพิวเตอร์ทั่วไป วงจร และระบบ iot เพื่อเป็นประโยชน์ให้กับผู้อื่น ต่อมาผมได้ทำการเข้าร่วมการต่างๆที่เกี่ยวกับคอมพิวเตอร์ได้แก่เข้าร่วมงาน AI FOR NEXTGEN Workshop & Hackathon สร้างเว็ปไซต์จาก ai , เข้าร่วมการตอบคำถาม ICT Challenge
+    กระผมได้มีโอกาศได้ทำงานร่วมกับคณะฝ่ายโสตศึกษาของโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล รับทำหน้าที่เป็นประฐานชุมนุมโสต กระผมได้เอาความรู้และประสบการณ์ที่ได้มาจากการเรียนรู้ด้วยตัวเองและจากการเข้่าร่วมงานต่างๆ สร้างแอปพลิเคชัน การยืมของห้องโสตผ่าน appsheet เพื่อแก้ปัญหาการยืมแล้วลืมคืน ,มีส่วนช่วยในการพัฒนาเว็ปเปิดกิจกรรมในงาน TJ-FIS 2024 (THAILAND - JAPAN STUDENT ICT FAIR 2024 ) และมีโปรเจ็คส่วนตัวคือกำลังพัฒนาเกม 2 เกมใน unity ทำให้กระผมมั่นใจว่ามีความชื่นชอบเกี่ยวกับการเขียนโปรแกรมเป็นอย่างมาก และตอนนี้กระผมมีความสนใจที่จะศึกษาเนื้อหาเกี่ยวกับ Data science ,ระบบ IoT (Internet of Things) เพราะเนื้อหาเหล่านี้ผมสามารถนำมาไปยุกต์ใช้ สร้าง
+นวัฒกรรมให้แก่ประเทศไทย
+</p>
+    </section>
+<section>
+    <h1>ทักษะของผม</h1>
+    <p>สามารถกดเข้าไปดูได้</p>
+    <div class="skills">
+        <a href="C.html" class="skill-badge">
+            <i class="fa-solid fa-code"></i> C
+        </a>
+        <a href="C++.html" class="skill-badge">
+            <i class="fa-solid fa-code"></i> C++
+        </a>
+        <a href="python.html" class="skill-badge">
+            <i class="fa-brands fa-python"></i> Python
+        </a>
+        <a href="unity.html" class="skill-badge">
+            <i class="fa-brands fa-unity"></i> Unity
+        </a>
+        <a href="web development.html" class="skill-badge">
+            <i class="fa-brands fa-html5"></i> Web Development
+        </a>
+        <a href="photograher.html" class="skill-badge">
+            <i class="fa-solid fa-camera"></i> Photographer
+        </a>
+        <a href="Game programming.html" class="skill-badge">
+            <i class="fa-brands fa-csharp"></i> C# Game Programming
+        </a>
+    </div>
+</section>
+
+
+    <section>
+        <h1>ช่องทางการติดต่อ</h1>
+        <div class="contact-container">
+
+            <a href="https://www.facebook.com/dnay.theph.s.tang" target="_blank" class="contact-item">
+                <img class="icon_profile" src="https://i.postimg.cc/3xL1tPKN/com-facebook-katana-icon-2024-12-27-21-01-37.png" alt="facebook icon">
+                <p><strong>Facebook</strong></p>
+                <p>ดนัยเทพ แซ่ตั้ง</p>
+            </a>
+
+            <a href="https://www.instagram.com/danaitep_saetang_" target="_blank" class="contact-item">
+                <img class="icon_profile" src="https://i.postimg.cc/xjmcg7Gn/Instagram-logo-2022-svg.png" alt="instagram icon">
+                <p><strong>Instagram</strong></p>
+                <p>@danaitep_saetang_</p>
+            </a>
+        </div>
+    </section>
+
+    <footer>© 2025 Han. All Rights Reserved.</footer>
+
+</body>
+</html>
