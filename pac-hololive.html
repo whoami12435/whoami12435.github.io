@@ -18,6 +18,34 @@
     color: #ff8cf7;
     text-shadow: 0 0 20px #ff5fe2;
   }
+.back-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #1b0033;
+  text-decoration: none;
+
+  background: linear-gradient(135deg, #ffb3f5, #ff5fe2);
+  border-radius: 30px;
+
+  box-shadow:
+    0 8px 20px rgba(255,95,226,0.6),
+    0 0 25px rgba(255,95,226,0.9);
+
+  transition: 0.25s;
+}
+
+.back-btn:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow:
+    0 12px 30px rgba(255,95,226,0.7),
+    0 0 35px rgba(255,140,247,1);
+}
+
+.back-btn:active {
+  transform: scale(0.95);
+}
 
   p {
     font-size: 32px;
@@ -35,7 +63,9 @@
 </style>
 </head>
 <body>
-
+<button>
+<a href="index.html" class="back-btn">⬅ กลับหน้าแรก</a>
+</button>
 <h1>🌸 PACHololive 🌸</h1>
 <p>⬅ ⬆ ⬇ ➡ | สู้ๆ</p>
 
