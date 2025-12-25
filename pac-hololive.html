@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<title>PACHololive</title>
+
+<style>
+  body {
+    background: radial-gradient(circle at top, #1b0033, #000);
+    color: #ffd6f5;
+    text-align: center;
+    font-family: "Comic Sans MS", Arial;
+  }
+
+  h1 {
+    font-size: 72px;
+    margin: 10px;
+    color: #ff8cf7;
+    text-shadow: 0 0 20px #ff5fe2;
+  }
+
+  p {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  canvas {
+    background: #050015;
+    border: 10px solid #ff8cf7;
+    border-radius: 16px;
+    display: block;
+    margin: auto;
+    box-shadow: 0 0 40px #ff5fe2;
+  }
+</style>
+</head>
+<body>
+
+<h1>🌸 PACHololive 🌸</h1>
+<p>⬅ ⬆ ⬇ ➡ | สู้ๆ</p>
+
+<canvas id="game" width="1200" height="660"></canvas>
+
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
+
+const tile = 60;
+
+// โหลดรูปผี
+const suiseiImg = new Image();
+suiseiImg.src = "https://i.postimg.cc/gk8ZGnDb/Hoshimachi-Suisei-2019-Portrait.webp";
+
+const mikoImg = new Image();
+mikoImg.src = "https://i.postimg.cc/y65dgsNr/Sakura-Miko-2020-Portrait.webp";
+
+// 1 = กำแพง, 0 = ทาง
+const map = [
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+[1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1],
+[1,0,1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,0,1],
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+[1,0,1,1,0,1,0,1,1,1,1,1,1,0,1,0,1,1,0,1],
+[1,0,0,0,0,1,0,0,0,1,1,0,0,0,1,0,0,0,0,1],
+[1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,1,1],
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+[1,0,1,1,0,1,1,1,1,0,0,1,1,1,1,0,1,1,0,1],
+[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+];
+
+let dots = JSON.parse(JSON.stringify(map));
+
+let pacman = { x:1, y:1, dx:0, dy:0 };
+
+let ghostChase  = { x:18, y:1 }; // Suisei
+let ghostAmbush = { x:18, y:9 }; // Miko
+
+let score = 0;
+let totalDots = map.flat().filter(v => v === 0).length;
+let stepCounter = 0;
+
+// คีย์บอร์ด
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowUp")    { pacman.dx = 0; pacman.dy = -1; }
+  if (e.key === "ArrowDown")  { pacman.dx = 0; pacman.dy = 1; }
+  if (e.key === "ArrowLeft")  { pacman.dx = -1; pacman.dy = 0; }
+  if (e.key === "ArrowRight") { pacman.dx = 1; pacman.dy = 0; }
+});
+
+// AI ผี
+function moveGhostAI(ghost, tx, ty) {
+  let dirs = [
+    {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1}
+  ];
+  let best = null;
+  let bestDist = Infinity;
+
+  for (let d of dirs) {
+    let nx = ghost.x + d.x;
+    let ny = ghost.y + d.y;
+    if (map[ny][nx] === 0) {
+      let dist = Math.abs(nx - tx) + Math.abs(ny - ty);
+      if (dist < bestDist) {
+        bestDist = dist;
+        best = d;
+      }
+    }
+  }
+  if (best) {
+    ghost.x += best.x;
+    ghost.y += best.y;
+  }
+}
+
+function update() {
+  let nx = pacman.x + pacman.dx;
+  let ny = pacman.y + pacman.dy;
+  if (map[ny][nx] === 0) {
+    pacman.x = nx;
+    pacman.y = ny;
+    if (dots[ny][nx] === 0) {
+      dots[ny][nx] = 2;
+      score++;
+    }
+  }
+
+  stepCounter++;
+
+  if (stepCounter % 2 === 0) {
+    moveGhostAI(ghostChase, pacman.x, pacman.y);
+    moveGhostAI(
+      ghostAmbush,
+      pacman.x + pacman.dx * 3,
+      pacman.y + pacman.dy * 3
+    );
+  }
+
+  if (
+    (pacman.x === ghostChase.x && pacman.y === ghostChase.y) ||
+    (pacman.x === ghostAmbush.x && pacman.y === ghostAmbush.y)
+  ) {
+    alert("👻 Idol Down!");
+    location.reload();
+  }
+
+  if (score === totalDots) {
+    alert("🌸 Hololive Victory!");
+    location.reload();
+  }
+}
+
+function draw() {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+
+  for (let y=0;y<map.length;y++) {
+    for (let x=0;x<map[y].length;x++) {
+      if (map[y][x] === 1) {
+        ctx.fillStyle = "#6b4eff";
+        ctx.fillRect(x*tile,y*tile,tile,tile);
+      }
+      if (dots[y][x] === 0) {
+        ctx.fillStyle = "#fff";
+        ctx.beginPath();
+        ctx.arc(x*tile+30,y*tile+30,8,0,Math.PI*2);
+        ctx.fill();
+      }
+    }
+  }
+
+  // Pacman
+  ctx.fillStyle = "#ffd700";
+  ctx.beginPath();
+  ctx.arc(pacman.x*tile+30,pacman.y*tile+30,22,0,Math.PI*2);
+  ctx.fill();
+
+  // Ghosts (รูป)
+  ctx.drawImage(suiseiImg,
+    ghostChase.x*tile+6,
+    ghostChase.y*tile+6,
+    48,48
+  );
+
+  ctx.drawImage(mikoImg,
+    ghostAmbush.x*tile+6,
+    ghostAmbush.y*tile+6,
+    48,48
+  );
+
+  ctx.fillStyle = "#ffd6f5";
+  ctx.font = "32px Arial";
+  ctx.fillText("🌸 Score: " + score, 20, canvas.height - 20);
+}
+
+setInterval(() => {
+  update();
+  draw();
+}, 200);
+</script>
+
+</body>
+</html>
