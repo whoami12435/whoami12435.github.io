@@ -2,132 +2,78 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar */
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        /* Content */
-        .work-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-
-        .work-container img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .work-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 600px;
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .work-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .work-container img {
-                width: 80%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พัฒนาเกม — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ HOBBIES</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก
+            </a>
+        </div>
     </nav>
 
-    <div class="work-container">
-        <img src="https://i.postimg.cc/50WK6RpM/Unity-2021-svg.png" alt="เรียน Python">
-        <div class="work-text">
-            <h1>พัฒนาผ่าน unity</h1>
-            <p>
-                ผมจะใช้เวลาในการทำเกม เมื่อผมมีเวลาว่าง โดยผมจะใช้โปรแกรม Unity ในการพัฒนาเกม เนื่องจากเป็นโปรแกรมที่มีความยืดหยุ่นและใช้งานง่าย
-                ผมได้เรียนรู้การใช้ Unity ผ่านทางคอร์สออนไลน์และการทดลองทำโปรเจคเล็กๆด้วยตัวเอง 
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Passion &amp; Craft</span>
+            <h1 class="section-title">การพัฒนาเกมในเวลาว่าง</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การเปลี่ยนจินตนาการและเรื่องราวให้มีชีวิตผ่านโค้ดและศิลปะดิจิทัล
             </p>
         </div>
-    </div>
+    </header>
 
-    
-        
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">การพัฒนาเกมผ่าน Unity Engine</h2>
+                    <p class="work-summary">
+                        ผมมักจะใช้เวลาว่างในการสร้างสรรค์และทดลองทำระบบเกมใหม่ ๆ โดยเลือกใช้ Unity เป็นเครื่องมือหลักเนื่องจากความยืดหยุ่นและคอมมูนิตี้ที่กว้างขวาง ได้เรียนรู้และทดลองทำโปรเจกต์เล็ก ๆ อย่างต่อเนื่องเพื่อสะสมประสบการณ์
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โปรแกรม</h4>
+                            <p>Unity Engine</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ผลงานที่กำลังทำ</h4>
+                            <p>2 เกม (The Memory Seeker &amp; Tech War)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/50WK6RpM/Unity-2021-svg.png" alt="Unity Game Dev" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— Game Development</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,120 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>My Works</title>
     <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            background: #f0f0f0;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            background: #222;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #444;
-        }
-        section {
-            background: white;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-        .work-item {
-            margin: 20px 0;
-            padding: 15px;
-            border-left: 5px solid #007bff;
-            background: #f9f9f9;
-            border-radius: 8px;
-        }
-        .work-item h3 {
-            margin: 0 0 10px;
-            color: #007bff;
-        }
-        .work-item p {
-            margin: 0;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>จิตสาธารณะและกิจกรรม — Danai Thep</title>
+    <meta name="description" content="กิจกรรมจิตสาธารณะ งานโสตทัศนศึกษา และการบำเพ็ญประโยชน์ ของดนัยเทพ แซ่ตั้ง">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
+    <!-- Navigation Bar -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ PORTFOLIO</span>
+            </a>
 
+            <button class="nav-mobile-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link active">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+
+            <a href="index.html#contact" class="nav-cta">
+                <i class="fa-regular fa-paper-plane"></i> ติดต่อฉัน
+            </a>
+        </div>
     </nav>
 
-
-    <section>
-        <h1>📂 ผลงานของผม</h1>
-        <div class="work-item">
-            <img src="https://i.postimg.cc/kG3XbCDZ/164.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ได้รับเกียรติบัตร นักเรียนมีจิตสาธารณะ ช่วยงานกลุ่มสาระการเรียนรู้วิทยาศาสตร์และเทคโนโลยี (คอมพิวเตอร์)
-ประจำภาคเรียนที่ 1 ปีการศึกษา 2568 </h3>
-</div>
-           
-        <div class="work-item">
-            <img src="https://i.postimg.cc/3NPBQ8sd/Page-141.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ได้รับเกียรติบัตร นักเรียนมีจิตสาธารณะ ช่วยงานโสตศึกษาปี 2567</h3>
-            <p> </p>
+    <!-- Header Section -->
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Public Service &amp; Leadership</span>
+            <h1 class="section-title">จิตสาธารณะและการทำประโยชน์เพื่อส่วนรวม</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การนำทักษะด้านโสตทัศนศึกษา เทคโนโลยี และการทำงานเป็นทีมมาสนับสนุนโรงเรียนและสังคม
+            </p>
         </div>
+    </header>
 
-        <div class="work-item">
-            <img src="https://i.postimg.cc/MZcNNvRZ/Page-025.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ได้รับเกียรติบัตร นักเรียนมีความพฤติยอดเยี่ยม ประจำภาคเรียนที่ 2 ปีการศึกษา 2567</h3>
-            <p> </p>
+    <!-- Content (cagd.as 2-column layout) -->
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <!-- Item 1: TJ-FIS 2024 -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        THAILAND - JAPAN STUDENT ICT FAIR 2024 (TJ-FIS 2024)
+                    </h2>
+                    <p class="work-summary">
+                        งานมหกรรมวิทยาศาสตร์และเทคโนโลยีสารสนเทศระดับนานาชาติ วันที่ 20-22 ธันวาคม 2567
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>งาน</h4>
+                            <p>TJ-FIS 2024 (ไทย-ญี่ปุ่น)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>Staff &amp; ฝ่ายโสตทัศนศึกษา</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ผลงานเด่น</h4>
+                            <p>ร่วมพัฒนาเว็บเปิดกิจกรรม</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ช่วงเวลา</h4>
+                            <p>20-22 ธันวาคม 2567</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียดการปฏิบัติงาน</h4>
+                        <p>
+                            รับหน้าที่เป็นทีมงาน Staff และฝ่ายโสตทัศนศึกษาดูแลระบบมัลติมีเดียตลอดการจัดงาน พร้อมทั้งมีส่วนช่วยในการเขียนและพัฒนาเว็บไซต์สำหรับใช้ในการทำพิธีเปิดกิจกรรม
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/dtjHXLS5/9b3bc3e7-ce20-4c64-aeab-b8c5c1d7540a.jpg" 
+                             alt="TJ-FIS 2024" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 2: Public Mind Computer Dept -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        เกียรติบัตรนักเรียนมีจิตสาธารณะ ช่วยงานกลุ่มสาระฯ วิทยาศาสตร์และเทคโนโลยี (คอมพิวเตอร์)
+                    </h2>
+                    <p class="work-summary">
+                        ประจำภาคเรียนที่ 1 ปีการศึกษา 2568 โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>จิตสาธารณะและบำเพ็ญประโยชน์</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>กลุ่มสาระฯ</h4>
+                            <p>วิทยาศาสตร์และเทคโนโลยี</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ช่วยงานด้านคอมพิวเตอร์และระบบ</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาคเรียน</h4>
+                            <p>ภาคเรียนที่ 1 / 2568</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียด</h4>
+                        <p>
+                            ได้รับเกียรติบัตรเชิดชูเกียรติในการเป็นผู้เสียสละเวลาและความสามารถเพื่อช่วยเหลือคุณครูและเพื่อนนักเรียนในงานดูแลระบบคอมพิวเตอร์และการจัดกิจกรรมการเรียนรู้ของกลุ่มสาระฯ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/kG3XbCDZ/164.png" 
+                             alt="เกียรติบัตรจิตสาธารณะ คอมพิวเตอร์" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 3: Public Mind Audio-Visual -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        เกียรติบัตรนักเรียนมีจิตสาธารณะ ช่วยงานโสตทัศนศึกษา
+                    </h2>
+                    <p class="work-summary">
+                        การอุทิศตนปฏิบัติหน้าที่ประธานและคณะทำงานโสตทัศนศึกษาตลอดปีการศึกษา 2567
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ชุมนุม</h4>
+                            <p>โสตทัศนศึกษา จ.ภ. สตูล</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ประธานชุมนุมโสตฯ</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ความรับผิดชอบ</h4>
+                            <p>ระบบภาพ เสียง และถ่ายทอดสด</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ปีการศึกษา</h4>
+                            <p>2567</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>ความมุ่งมั่น</h4>
+                        <p>
+                            ดูแลการควบคุมอุปกรณ์ระบบเสียง เครื่องฉายภาพ และการถ่ายทอดสดในทุกกิจกรรมของโรงเรียน พร้อมพัฒนาระบบ AppSheet เพื่อจัดระเบียบการยืม-คืนอุปกรณ์อย่างมีประสิทธิภาพ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/3NPBQ8sd/Page-141.png" 
+                             alt="เกียรติบัตรจิตสาธารณะ โสตศึกษา" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 4: Outstanding Behavior -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        เกียรติบัตรนักเรียนมีความประพฤติยอดเยี่ยม
+                    </h2>
+                    <p class="work-summary">
+                        ประจำภาคเรียนที่ 2 ปีการศึกษา 2567 โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>รางวัล</h4>
+                            <p>ความประพฤติยอดเยี่ยม</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>สถาบัน</h4>
+                            <p>จ.ภ. สตูล</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาคเรียน</h4>
+                            <p>ภาคเรียนที่ 2 / 2567</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>คุณลักษณะ</h4>
+                            <p>มีวินัย มีน้ำใจ และซื่อสัตย์</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียด</h4>
+                        <p>
+                            ได้รับการยกย่องเป็นแบบอย่างที่ดีในการประพฤติตน มีความรับผิดชอบต่อหน้าที่ และปฏิบัติตามกฎระเบียบของโรงเรียนอย่างเคร่งครัด
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/MZcNNvRZ/Page-025.png" 
+                             alt="เกียรติบัตรความประพฤติยอดเยี่ยม" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 5: Royal Photography -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        ช่างภาพและบันทึกภาพ งานถวายพระพร 12 สิงหาคม
+                    </h2>
+                    <p class="work-summary">
+                        งานถวายพระพร สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง วันที่ 7 สิงหาคม 2568
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>กิจกรรม</h4>
+                            <p>งานพิธีการถวายพระพร</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ช่างภาพ &amp; บันทึกวิดีโอ</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ทักษะ</h4>
+                            <p>Camera Angle &amp; Post-production</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>วันที่</h4>
+                            <p>7 สิงหาคม 2568</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>ประสบการณ์</h4>
+                        <p>
+                            บันทึกภาพถ่ายประวัติศาสตร์และวิดีโอบรรยากาศในพิธีทางการ เรียนรู้การวางแผนมุมกล้อง แสง และการทำงานประสานร่วมกับคณะครูอย่างเคร่งครัดในพิธีการสำคัญ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/wTd8Hbjk/0U1A8109.jpg" 
+                             alt="บันทึกภาพงานถวายพระพร" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
         </div>
+    </main>
 
-        <div class="work-item">
-            <img src="https://i.postimg.cc/dtjHXLS5/9b3bc3e7-ce20-4c64-aeab-b8c5c1d7540a.jpg" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3> THAILAND - JAPAN STUDENT ICT FAIR 2024 วันที่ 20-22 ธันวาคม พ.ศ. 2567</h3>
-            <p>ทำหน้าที่ ฝ่ายโสต , staff และมีส่วนช่วยในการพัฒนาเว็ปเปิดกิจกรรม</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                DANAITEP. <span>— Public Mind</span>
+            </div>
+            <div class="footer-copy">
+                แก้ไขล่าสุด: 11/19/2025 | ออกแบบและปรับปรุงสไตล์ cagd.as
+            </div>
         </div>
-                <div class="work-item">
-            <img src="https://i.postimg.cc/wTd8Hbjk/0U1A8109.jpg" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ช่วยถ่ายรูป งานถวายพระพร สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง วันที่ 7 สิงหาคม พ.ศ. 2568</h3>
-            <p>กระผมได้รับความรู้เสริมเนื่องจากต้องพัฒนาตัวเองในการตัดคริปวิดิโอส่งแข่ง และประสบการณ์การทำงานเป็นทีมในการที่ผมเป็นคนประสานงานเรื่อง มุมกล้องและบทของวิดิโอ โดยกระผมรับหน้าที่ในการตรวจงาน และตัดคริปวิดิโอ</p>
+    </footer>
 
- 
-
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
-
+    <script>
+        const mobileBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>

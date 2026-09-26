@@ -1,232 +1,110 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-<meta charset="UTF-8">
-<title>PACHololive</title>
-
-<style>
-  body {
-    background: radial-gradient(circle at top, #1b0033, #000);
-    color: #ffd6f5;
-    text-align: center;
-    font-family: "Comic Sans MS", Arial;
-  }
-
-  h1 {
-    font-size: 72px;
-    margin: 10px;
-    color: #ff8cf7;
-    text-shadow: 0 0 20px #ff5fe2;
-  }
-.back-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #1b0033;
-  text-decoration: none;
-
-  background: linear-gradient(135deg, #ffb3f5, #ff5fe2);
-  border-radius: 30px;
-
-  box-shadow:
-    0 8px 20px rgba(255,95,226,0.6),
-    0 0 25px rgba(255,95,226,0.9);
-
-  transition: 0.25s;
-}
-
-.back-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow:
-    0 12px 30px rgba(255,95,226,0.7),
-    0 0 35px rgba(255,140,247,1);
-}
-
-.back-btn:active {
-  transform: scale(0.95);
-}
-
-  p {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-
-  canvas {
-    background: #050015;
-    border: 10px solid #ff8cf7;
-    border-radius: 16px;
-    display: block;
-    margin: auto;
-    box-shadow: 0 0 40px #ff5fe2;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
-<button>
-<a href="index.html" class="back-btn">⬅ กลับหน้าแรก</a>
-</button>
-<h1>🌸 PACHololive 🌸</h1>
-<p>⬅ ⬆ ⬇ ➡ | สู้ๆ</p>
 
-<canvas id="game" width="1200" height="660"></canvas>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ SKILLS</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link active">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html#skills" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าทักษะ
+            </a>
+        </div>
+    </nav>
 
-<script>
-const canvas = document.getElementById("game");
-const ctx = canvas.getContext("2d");
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Frontend &amp; Web Standards</span>
+            <h1 class="section-title">การพัฒนาเว็บไซต์ (Web Development)</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การออกแบบโครงสร้างเว็บไซต์ การจัดรูปแบบด้วย CSS และการเขียนสคริปต์โต้ตอบด้วย JavaScript
+            </p>
+        </div>
+    </header>
 
-const tile = 60;
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
 
-// โหลดรูปผี
-const suiseiImg = new Image();
-suiseiImg.src = "https://i.postimg.cc/gk8ZGnDb/Hoshimachi-Suisei-2019-Portrait.webp";
+            <!-- Item 1: TJ-FIS 2024 Opening Website -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">พัฒนาเว็บไซต์เปิดกิจกรรมในงาน TJ-FIS 2024</h2>
+                    <p class="work-summary">
+                        มีส่วนสำคัญในการเขียนโค้ดและพัฒนาเว็บไซต์สำหรับใช้ในพิธีเปิดกิจกรรมงาน THAILAND - JAPAN STUDENT ICT FAIR 2024 เพื่อแสดงผลกราฟิกและแอนิเมชันเปิดงานบนเวทีระดับนานาชาติ
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>งาน</h4>
+                            <p>TJ-FIS 2024 (ไทย-ญี่ปุ่น)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>เทคโนโลยี</h4>
+                            <p>HTML5, CSS3, Modern JS</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/dtjHXLS5/9b3bc3e7-ce20-4c64-aeab-b8c5c1d7540a.jpg" alt="TJ-FIS 2024 Opening Web" loading="lazy">
+                    </div>
+                </div>
+            </article>
 
-const mikoImg = new Image();
-mikoImg.src = "https://i.postimg.cc/y65dgsNr/Sakura-Miko-2020-Portrait.webp";
+            <!-- Item 2: Canvas Game PACHololive -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">PACHololive — HTML5 Canvas 2D Game</h2>
+                    <p class="work-summary">
+                        พัฒนาเกม 2D สไตล์ Pacman บนเว็บเบราว์เซอร์ด้วย Pure JavaScript และ HTML5 Canvas API โดยไม่มีการพึ่งพาไลบรารีภายนอก มีระบบ AI วิ่งไล่และดักหน้าผู้เล่น (A* / Distance-based AI) พร้อมระบบคะแนน
+                    </p>
+                    <div class="work-actions">
+                        <a href="pac-hololive.html" class="btn-primary">
+                            <i class="fa-solid fa-gamepad"></i> เข้าเล่นเกม PACHololive
+                        </a>
+                    </div>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>Browser Canvas Game</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาษา</h4>
+                            <p>Vanilla JavaScript, Canvas API</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item" style="background: #050015; padding: 20px; text-align: center;">
+                        <img src="https://i.postimg.cc/gk8ZGnDb/Hoshimachi-Suisei-2019-Portrait.webp" alt="PACHololive Preview" style="max-height: 260px; margin: 0 auto; object-fit: contain;">
+                    </div>
+                </div>
+            </article>
 
-// 1 = กำแพง, 0 = ทาง
-const map = [
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
-[1,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,1],
-[1,0,1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,0,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,0,1,1,0,1,0,1,1,1,1,1,1,0,1,0,1,1,0,1],
-[1,0,0,0,0,1,0,0,0,1,1,0,0,0,1,0,0,0,0,1],
-[1,1,1,1,0,1,1,1,0,1,1,0,1,1,1,0,1,1,1,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,0,1,1,0,1,1,1,1,0,0,1,1,1,1,0,1,1,0,1],
-[1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
-[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
-];
+        </div>
+    </main>
 
-let dots = JSON.parse(JSON.stringify(map));
-
-let pacman = { x:1, y:1, dx:0, dy:0 };
-
-let ghostChase  = { x:18, y:1 }; // Suisei
-let ghostAmbush = { x:18, y:9 }; // Miko
-
-let score = 0;
-let totalDots = map.flat().filter(v => v === 0).length;
-let stepCounter = 0;
-
-// คีย์บอร์ด
-document.addEventListener("keydown", e => {
-  if (e.key === "ArrowUp")    { pacman.dx = 0; pacman.dy = -1; }
-  if (e.key === "ArrowDown")  { pacman.dx = 0; pacman.dy = 1; }
-  if (e.key === "ArrowLeft")  { pacman.dx = -1; pacman.dy = 0; }
-  if (e.key === "ArrowRight") { pacman.dx = 1; pacman.dy = 0; }
-});
-
-// AI ผี
-function moveGhostAI(ghost, tx, ty) {
-  let dirs = [
-    {x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1}
-  ];
-  let best = null;
-  let bestDist = Infinity;
-
-  for (let d of dirs) {
-    let nx = ghost.x + d.x;
-    let ny = ghost.y + d.y;
-    if (map[ny][nx] === 0) {
-      let dist = Math.abs(nx - tx) + Math.abs(ny - ty);
-      if (dist < bestDist) {
-        bestDist = dist;
-        best = d;
-      }
-    }
-  }
-  if (best) {
-    ghost.x += best.x;
-    ghost.y += best.y;
-  }
-}
-
-function update() {
-  let nx = pacman.x + pacman.dx;
-  let ny = pacman.y + pacman.dy;
-  if (map[ny][nx] === 0) {
-    pacman.x = nx;
-    pacman.y = ny;
-    if (dots[ny][nx] === 0) {
-      dots[ny][nx] = 2;
-      score++;
-    }
-  }
-
-  stepCounter++;
-
-  if (stepCounter % 2 === 0) {
-    moveGhostAI(ghostChase, pacman.x, pacman.y);
-    moveGhostAI(
-      ghostAmbush,
-      pacman.x + pacman.dx * 3,
-      pacman.y + pacman.dy * 3
-    );
-  }
-
-  if (
-    (pacman.x === ghostChase.x && pacman.y === ghostChase.y) ||
-    (pacman.x === ghostAmbush.x && pacman.y === ghostAmbush.y)
-  ) {
-    alert("👻 Idol Down!");
-    location.reload();
-  }
-
-  if (score === totalDots) {
-    alert("🌸 Hololive Victory!");
-    location.reload();
-  }
-}
-
-function draw() {
-  ctx.clearRect(0,0,canvas.width,canvas.height);
-
-  for (let y=0;y<map.length;y++) {
-    for (let x=0;x<map[y].length;x++) {
-      if (map[y][x] === 1) {
-        ctx.fillStyle = "#6b4eff";
-        ctx.fillRect(x*tile,y*tile,tile,tile);
-      }
-      if (dots[y][x] === 0) {
-        ctx.fillStyle = "#fff";
-        ctx.beginPath();
-        ctx.arc(x*tile+30,y*tile+30,8,0,Math.PI*2);
-        ctx.fill();
-      }
-    }
-  }
-
-  // Pacman
-  ctx.fillStyle = "#ffd700";
-  ctx.beginPath();
-  ctx.arc(pacman.x*tile+30,pacman.y*tile+30,22,0,Math.PI*2);
-  ctx.fill();
-
-  // Ghosts (รูป)
-  ctx.drawImage(suiseiImg,
-    ghostChase.x*tile+6,
-    ghostChase.y*tile+6,
-    48,48
-  );
-
-  ctx.drawImage(mikoImg,
-    ghostAmbush.x*tile+6,
-    ghostAmbush.y*tile+6,
-    48,48
-  );
-
-  ctx.fillStyle = "#ffd6f5";
-  ctx.font = "32px Arial";
-  ctx.fillText("🌸 Score: " + score, 20, canvas.height - 20);
-}
-
-setInterval(() => {
-  update();
-  draw();
-}, 200);
-</script>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— Web Development</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
+        </div>
+    </footer>
 
 </body>
 </html>

@@ -2,74 +2,84 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>PACHololive</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PACHololive — Danai Thep</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="cagdas-theme.css">
 
 <style>
   body {
-    background: radial-gradient(circle at top, #1b0033, #000);
+    background: radial-gradient(circle at top, #1b0033, #09090b);
     color: #ffd6f5;
     text-align: center;
-    font-family: "Comic Sans MS", Arial;
+    font-family: 'Prompt', Arial, sans-serif;
+    padding-bottom: 50px;
   }
 
-  h1 {
-    font-size: 72px;
-    margin: 10px;
+  .game-header {
+    padding: 30px 20px 10px;
+  }
+
+  .game-title {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin: 10px 0;
     color: #ff8cf7;
-    text-shadow: 0 0 20px #ff5fe2;
+    text-shadow: 0 0 25px rgba(255, 95, 226, 0.6);
+    font-weight: 700;
   }
-.back-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #1b0033;
-  text-decoration: none;
 
-  background: linear-gradient(135deg, #ffb3f5, #ff5fe2);
-  border-radius: 30px;
+  .game-instructions {
+    font-size: 1.15rem;
+    margin-bottom: 24px;
+    color: #e2e8f0;
+  }
 
-  box-shadow:
-    0 8px 20px rgba(255,95,226,0.6),
-    0 0 25px rgba(255,95,226,0.9);
-
-  transition: 0.25s;
-}
-
-.back-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow:
-    0 12px 30px rgba(255,95,226,0.7),
-    0 0 35px rgba(255,140,247,1);
-}
-
-.back-btn:active {
-  transform: scale(0.95);
-}
-
-  p {
-    font-size: 32px;
-    margin-bottom: 20px;
+  .canvas-wrapper {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
   }
 
   canvas {
     background: #050015;
-    border: 10px solid #ff8cf7;
+    border: 4px solid #ff8cf7;
     border-radius: 16px;
-    display: block;
-    margin: auto;
-    box-shadow: 0 0 40px #ff5fe2;
+    box-shadow: 0 0 35px rgba(255, 95, 226, 0.4);
+    max-width: 100%;
+    height: auto;
   }
 </style>
 </head>
 <body>
-<button>
-<a href="index.html" class="back-btn">⬅ กลับหน้าแรก</a>
-</button>
-<h1>🌸 PACHololive 🌸</h1>
-<p>⬅ ⬆ ⬇ ➡ | สู้ๆ</p>
 
-<canvas id="game" width="1200" height="660"></canvas>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ MINI GAME</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+            </ul>
+            <a href="index.html" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก
+            </a>
+        </div>
+    </nav>
+
+    <div class="game-header">
+        <h1 class="game-title">🌸 PACHololive 🌸</h1>
+        <p class="game-instructions">กดปุ่มลูกศร ⬅ ⬆ ⬇ ➡ บนคีย์บอร์ดเพื่อบังคับตัวละคร | เก็บจุดสีขาวให้หมดแล้วระวังผี!</p>
+    </div>
+
+    <div class="canvas-wrapper">
+        <canvas id="game" width="1200" height="660"></canvas>
+    </div>
 
 <script>
 const canvas = document.getElementById("game");
@@ -112,10 +122,10 @@ let stepCounter = 0;
 
 // คีย์บอร์ด
 document.addEventListener("keydown", e => {
-  if (e.key === "ArrowUp")    { pacman.dx = 0; pacman.dy = -1; }
-  if (e.key === "ArrowDown")  { pacman.dx = 0; pacman.dy = 1; }
-  if (e.key === "ArrowLeft")  { pacman.dx = -1; pacman.dy = 0; }
-  if (e.key === "ArrowRight") { pacman.dx = 1; pacman.dy = 0; }
+  if (e.key === "ArrowUp")    { pacman.dx = 0; pacman.dy = -1; e.preventDefault(); }
+  if (e.key === "ArrowDown")  { pacman.dx = 0; pacman.dy = 1;  e.preventDefault(); }
+  if (e.key === "ArrowLeft")  { pacman.dx = -1; pacman.dy = 0; e.preventDefault(); }
+  if (e.key === "ArrowRight") { pacman.dx = 1; pacman.dy = 0;  e.preventDefault(); }
 });
 
 // AI ผี
@@ -146,7 +156,7 @@ function moveGhostAI(ghost, tx, ty) {
 function update() {
   let nx = pacman.x + pacman.dx;
   let ny = pacman.y + pacman.dy;
-  if (map[ny][nx] === 0) {
+  if (map[ny] && map[ny][nx] === 0) {
     pacman.x = nx;
     pacman.y = ny;
     if (dots[ny][nx] === 0) {
@@ -170,12 +180,12 @@ function update() {
     (pacman.x === ghostChase.x && pacman.y === ghostChase.y) ||
     (pacman.x === ghostAmbush.x && pacman.y === ghostAmbush.y)
   ) {
-    alert("👻 Idol Down!");
+    alert("👻 Game Over! พยายามใหม่อีกครั้งนะ");
     location.reload();
   }
 
   if (score === totalDots) {
-    alert("🌸 Hololive Victory!");
+    alert("🌸 Hololive Victory! คุณชนะแล้ว!");
     location.reload();
   }
 }
@@ -204,28 +214,23 @@ function draw() {
   ctx.arc(pacman.x*tile+30,pacman.y*tile+30,22,0,Math.PI*2);
   ctx.fill();
 
-  // Ghosts (รูป)
-  ctx.drawImage(suiseiImg,
-    ghostChase.x*tile+6,
-    ghostChase.y*tile+6,
-    48,48
-  );
-
-  ctx.drawImage(mikoImg,
-    ghostAmbush.x*tile+6,
-    ghostAmbush.y*tile+6,
-    48,48
-  );
+  // Ghosts
+  if (suiseiImg.complete) {
+    ctx.drawImage(suiseiImg, ghostChase.x*tile+6, ghostChase.y*tile+6, 48, 48);
+  }
+  if (mikoImg.complete) {
+    ctx.drawImage(mikoImg, ghostAmbush.x*tile+6, ghostAmbush.y*tile+6, 48, 48);
+  }
 
   ctx.fillStyle = "#ffd6f5";
-  ctx.font = "32px Arial";
-  ctx.fillText("🌸 Score: " + score, 20, canvas.height - 20);
+  ctx.font = "26px Prompt, Arial";
+  ctx.fillText("🌸 คะแนน: " + score + " / " + totalDots, 24, canvas.height - 20);
 }
 
 setInterval(() => {
   update();
   draw();
-}, 200);
+}, 180);
 </script>
 
 </body>

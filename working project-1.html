@@ -2,168 +2,185 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        .work-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            padding: 80px 10%;
-            gap: 40px;
-        }
-
-        .image-group {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .image-group img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .image-group img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 800px;
-            background: white;
-            padding: 30px 40px;
-            border-radius: 16px;
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-            text-align: justify;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-
-        @media (max-width: 800px) {
-            .image-group img {
-                width: 80%;
-            }
-
-            .work-text {
-                padding: 20px;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>โปรเจกต์ที่กำลังพัฒนา — Danai Thep</title>
+    <meta name="description" content="โปรเจกต์แอปพลิเคชันและเกมที่กำลังพัฒนาโดย ดนัยเทพ แซ่ตั้ง">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
+    <!-- Navigation Bar -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ PORTFOLIO</span>
+            </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+            <button class="nav-mobile-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link active">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+
+            <a href="index.html#contact" class="nav-cta">
+                <i class="fa-regular fa-paper-plane"></i> ติดต่อฉัน
+            </a>
+        </div>
     </nav>
 
-
-    <div class="work-container">
-        <div class="image-group">
-            <img src="https://i.postimg.cc/FzNZk6fH/Screenshot-2025-10-30-185006.png" alt="Appsheet 1">
-            <img src="https://i.postimg.cc/fLZX89Mp/Screenshot-2025-10-30-185021.png" alt="Appsheet 2">
-        </div>
-        <div class="work-text">
-            <h1>การพัฒนาแอป บันทึกการยืมของห้องโสตภายในโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูลผ่าน AppSheet</h1>
-            <p>
-                ผมในฐานะประธานห้องโสต ได้เล็งเห็นปัญหาในการจัดการบันทึกการยืมอุปกรณ์โสตทัศนูปกรณ์ที่ยังคงใช้วิธีการบันทึกแบบเดิม ๆ
-                ซึ่งมักจะเกิดความผิดพลาด เช่น การลืมคืนอุปกรณ์ หรือการใช้กระดาษบันทึกข้อมูลที่เปลืองทรัพยากร
-                ดังนั้นผมจึงได้พัฒนาแอปพลิเคชันโดยใช้ AppSheet เพื่อช่วยจัดการการยืมอุปกรณ์ให้สะดวกและมีประสิทธิภาพมากขึ้น
-                ช่วยลดความผิดพลาด เพิ่มความรวดเร็ว และเพิ่มความสะดวกในการใช้งานของผู้รับผิดชอบ
+    <!-- Header -->
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Work In Progress</span>
+            <h1 class="section-title">โปรเจกต์และแอปพลิเคชันที่กำลังพัฒนา</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การนำความรู้ด้านการเขียนโปรแกรมและการออกแบบระบบ มาสร้างเป็นผลงานจริงที่ตอบโจทย์ผู้ใช้งาน
             </p>
         </div>
-    </div>
+    </header>
 
+    <!-- Project List (cagd.as 2-column layout) -->
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
 
-    <div class="work-container">
-        <div class="image-group">
-            <img src="https://i.postimg.cc/j2LzB6ZM/Screenshot-2025-11-03-170643.png" alt="เกม memory seeker 1">
-            <img src="https://i.postimg.cc/WzjFjGNW/Screenshot-2025-11-03-165044.png" alt="เกม memory seeker 2">
-            <img src="https://i.postimg.cc/26Tmbhd5/Screenshot-2025-11-03-165229.png" alt="เกม memory seeker 3">
+            <!-- Project 1: AppSheet -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        การพัฒนาแอปบันทึกการยืมของห้องโสตผ่าน AppSheet
+                    </h2>
+                    <p class="work-summary">
+                        ระบบบันทึกการยืม-คืนอุปกรณ์โสตทัศนูปกรณ์ภายในโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ผ่านระบบ Google AppSheet บนสมาร์ตโฟน
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>Internal Cloud Tool</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ประธานห้องโสต &amp; ผู้พัฒนา</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>เครื่องมือ</h4>
+                            <p>AppSheet / Google Sheets</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>กลุ่มเป้าหมาย</h4>
+                            <p>ครูและนักเรียน จ.ภ. สตูล</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>แรงบันดาลใจและแนวทางแก้ปัญหา</h4>
+                        <p>
+                            ผมในฐานะประธานห้องโสต ได้เล็งเห็นปัญหาในการจัดการบันทึกการยืมอุปกรณ์โสตทัศนูปกรณ์ที่ยังคงใช้วิธีการบันทึกแบบเดิม ๆ ซึ่งมักจะเกิดความผิดพลาด เช่น การลืมคืนอุปกรณ์ หรือการใช้กระดาษบันทึกข้อมูลที่เปลืองทรัพยากร จึงพัฒนาแอปพลิเคชันเพื่อช่วยจัดการอย่างเป็นระบบ เพิ่มความรวดเร็วและตรวจสอบสถานะได้ตลอดเวลา
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/FzNZk6fH/Screenshot-2025-10-30-185006.png" 
+                                 alt="AppSheet Screenshot 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/fLZX89Mp/Screenshot-2025-10-30-185021.png" 
+                                 alt="AppSheet Screenshot 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: The Memory Seeker -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        The Memory Seeker — เกมผจญภัยค้นหาความทรงจำ
+                    </h2>
+                    <p class="work-summary">
+                        เกมแนวผจญภัยที่ผู้เล่นจะได้รับบทเป็นตัวละครที่ต้องออกเดินทางสำรวจโลกแฟนตาซี เพื่อไขปริศนาและกอบกู้ความทรงจำที่สาบสูญ
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>เอนจิน</h4>
+                            <p>Unity Engine (C#)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>รูปแบบภาพ</h4>
+                            <p>2D Characters in 3D World</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>สถานะปัจจุบัน</h4>
+                            <p style="color: var(--accent-blue-light);">Alpha Testing Phase</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>Solo Developer &amp; Level Design</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>กระบวนการพัฒนาและทิศทาง</h4>
+                        <p>
+                            เกมนี้ผสมผสานตัวละครแบบ 2D เข้ากับฉากสภาพแวดล้อม 3D ที่ให้มิติความลึก เคยเปิดให้เพื่อน ๆ ได้ทดสอบในช่วง Alpha Tester และได้รับเสียงตอบรับที่ดี ปัจจุบันกำลังขยายขนาดพื้นที่ของฉาก ขัดเกลาเนื้อเรื่องและเพิ่มปริศนาเพื่อให้ผู้เล่นได้รับประสบการณ์ที่ดีที่สุด
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/j2LzB6ZM/Screenshot-2025-11-03-170643.png" 
+                             alt="The Memory Seeker 1" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/WzjFjGNW/Screenshot-2025-11-03-165044.png" 
+                                 alt="The Memory Seeker 2" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/26Tmbhd5/Screenshot-2025-11-03-165229.png" 
+                                 alt="The Memory Seeker 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
         </div>
-        <div class="work-text">
-            <h1>the memory seeker</h1>
-            <p>
-                เป็นเกมแนวผจญภัยที่ผู้เล่นจะได้รับบทเป็นตัวละครที่ต้องสำรวจโลกแฟนตาซีเพื่อค้นหาความทรงจำที่หายไป
-                ผู้เล่นจะได้พบกับปริศนาและอุปสรรคต่าง ๆ ที่ต้องแก้ไขเพื่อก้าวไปข้างหน้าในเรื่องราวของเกม
-                โดยเกมนี้มีตัวละครแบบ 2D ในโลก 3D เคยเปิดให้เพื่อน ๆ มาทดสอบในช่วง alpha tester แล้วได้รับเสียงตอบรับที่ดี
-                ปัจจุบันยังอยู่ในช่วงพัฒนา โดยผมตั้งใจให้เกมนี้มีขนาดพื้นที่ใหญ่ เน้นคุณภาพของเนื้อเรื่องและรายละเอียดเล็ก ๆ น้อย ๆ
-                เพื่อให้ผู้เล่นได้สัมผัสประสบการณ์ที่ดีที่สุดก่อนเปิดตัวอย่างเป็นทางการ
-            </p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                DANAITEP. <span>— Projects</span>
+            </div>
+            <div class="footer-copy">
+                แก้ไขล่าสุด: 11/19/2025 | ออกแบบและปรับปรุงสไตล์ cagd.as
+            </div>
         </div>
-    </div>
+    </footer>
 
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
-
+    <script>
+        const mobileBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>

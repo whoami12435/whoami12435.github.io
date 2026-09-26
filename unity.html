@@ -2,170 +2,140 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar */
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        /* Content */
-        .work-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-
-        .work-container img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .work-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 600px;
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-        .work-center-text p {
-            text-align: center;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-        .work-center-text {
-            text-align: center;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #0052D4;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Responsive */
-        @media (max-width: 800px) {
-            .work-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .work-container img {
-                width: 80%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity Game Development — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ SKILLS</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link active">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html#skills" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าทักษะ
+            </a>
+        </div>
     </nav>
 
-    <div class="work-container">
-        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="เรียน Python">
-        <div class="work-text">
-            <h1>การทำ unity</h1>
-            <p>
-                unity เป็นเครื่องมือที่ผมใช้ในการพัฒนาเกม 3 มิติ และ 2 มิติ ซึ่งผมได้เรียนรู้การใช้งาน Unity ผ่านทางคอร์สออนไลน์และการทดลองทำโปรเจ็กต์เล็ก ๆ
-                ผมได้เรียนรู้การสร้างสภาพแวดล้อมในเกม การเขียนสคริปต์ด้วยภาษา C# และการจัดการกับฟิสิกส์ในเกม แม้ผมนยังไม่มีผลงานออกมา แต่ว่ามีโปรเจคที่กำลังทำ 2 เกม ซึ่งกำลังพัฒนาเลื่อยๆ </p>
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Game Engine &amp; Creative</span>
+            <h1 class="section-title">การพัฒนาเกมด้วย Unity Engine</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การออกแบบโลกเสมือน ฟิสิกส์ในเกม และการเขียนสคริปต์ควบคุมด้วยภาษา C#
+            </p>
         </div>
-    </div>
-            <div class="work-center-text">
-            <h1>พัฒนาเกม</h1>
-        </div>
-        <div class="work-container">
-        <img src="https://i.postimg.cc/j2LzB6ZM/Screenshot-2025-11-03-170643.png" alt="เรียน Python">
-        <img src="https://i.postimg.cc/WzjFjGNW/Screenshot-2025-11-03-165044.png" alt="เรียน Python">
-        <img src="https://i.postimg.cc/26Tmbhd5/Screenshot-2025-11-03-165229.png" alt="เรียน Python">
-    </div>  
-    <div class ="work-center-text p">
-        <h1>the memory seeker</h1>
-        <p>
-            เป็นเกมแนวผจญภัยที่ผู้เล่นจะได้รับบทเป็นตัวละครที่ต้องสำรวจโลกแฟนตาซีเพื่อค้นหาความทรงจำที่หายไป
-            ผู้เล่นจะได้พบกับปริศนาและอุปสรรคต่าง ๆ ที่ต้องแก้ไขเพื่อก้าวไปข้างหน้าในเรื่องราวของเกม โดยเกมจะเป็นเกมที่มีตัวละคร 2D ในโลก 3D
-            เคยเปิด alpha tester โดยให้เพื่อนๆมาลองเล่น โดยคัวเองอยู่ในช่วงพัฒนาเกมนี้อยู่ เนื่องจาก ตัวเกมถูกวางแผนให้ตัวเกมมีพื้นที่ขนาดใหญ่ เป็นเกมที่เน้นคุณภาพด้านเนื้อเรื่อง ความใส่ใจในรายละเอียดเล็กๆน้อย ทำให้ต้องเพิ่มเวลาในการพัฒนาเกมนี้มากขึ้น
-            และ ผมต้องการให้เกมมีความสมบูรณ์และน่าสนใจมากที่สุดก่อนที่จะปล่อยออกมาให้ผู้เล่นได้สัมผัสประสบการณ์การเล่นเกมนี้
-        </p>
+    </header>
 
-        <div class="work-container">
-        <img src="https://i.postimg.cc/yd59Wcky/Screenshot-2025-11-03-212009.png" alt="เรียน Python">
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <!-- Overview -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">การเรียนรู้และการใช้งาน Unity Engine</h2>
+                    <p class="work-summary">
+                        Unity เป็นเครื่องมือหลักที่ผมใช้ในการพัฒนาเกมทั้ง 2 มิติ และ 3 มิติ โดยศึกษาผ่านทางคอร์สออนไลน์และการทดลองสร้างโปรเจกต์ขึ้นมาด้วยตนเอง ครอบคลุมการจัดวาง Scene, แสงเงา, ระบบฟิสิกส์ (Rigidbody / Colliders) และการเขียนสคริปต์ด้วยภาษา C#
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>เอนจิน</h4>
+                            <p>Unity 2D &amp; 3D</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาษาหลัก</h4>
+                            <p>C# Scripting</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="Unity Development" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Game 1: The Memory Seeker -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">The Memory Seeker</h2>
+                    <p class="work-summary">
+                        เกมแนวผจญภัยที่ผู้เล่นจะได้รับบทเป็นตัวละครที่ต้องสำรวจโลกแฟนตาซีเพื่อค้นหาความทรงจำที่หายไป โดยผสมผสานตัวละคร 2D เข้ากับฉาก 3D เคยเปิดให้กลุ่มเพื่อนทดสอบในระดับ Alpha Tester และได้รับเสียงตอบรับที่ดี ปัจจุบันกำลังขยายขนาดพื้นที่และลงรายละเอียดของเนื้อเรื่อง
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>รูปแบบ</h4>
+                            <p>2D Characters in 3D World</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>สถานะ</h4>
+                            <p style="color: var(--accent-blue-light);">กำลังพัฒนา (Alpha)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/j2LzB6ZM/Screenshot-2025-11-03-170643.png" alt="The Memory Seeker" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/WzjFjGNW/Screenshot-2025-11-03-165044.png" alt="Gameplay 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/26Tmbhd5/Screenshot-2025-11-03-165229.png" alt="Gameplay 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Game 2: Tech War -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">Tech War (บอร์ดเกมวางแผนกลยุทธ์)</h2>
+                    <p class="work-summary">
+                        เกมแนว Board Game วางแผนการรบและการอัปเกรดพัฒนาเทคโนโลยี เพื่อเอาชนะฝ่ายตรงข้าม โดยผู้เล่นจะต้องบริหารจัดการทรัพยากรและวางกลยุทธ์ในการเดินหมากอย่างรอบคอบ มีการออกแบบแผนที่ที่ท้าทายความคิดและการตัดสินใจ
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>แนวเกม</h4>
+                            <p>Turn-based Strategy / Board Game</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ฟีเจอร์</h4>
+                            <p>Resource Management &amp; Tech Tree</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/yd59Wcky/Screenshot-2025-11-03-212009.png" alt="Tech War Screenshot" loading="lazy">
+                    </div>
+                    <div class="gallery-item" style="max-width: 220px; margin: 0 auto;">
+                        <img src="https://i.postimg.cc/tR2Kw32m/qrcode-270870389-a9c31e2838e719d3471dda9d070cf9e5.png" alt="QR Code Tech War" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
         </div>
-        <div class ="work-center-text">
-                    <h1>tech war</h1>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— Unity Development</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
         </div>
-        <p>
-            โดยตัวเกมจะเป็นเกมแนว borad game ที่ผู้เล่นจะได้วางแผนการรบและการพัฒนาเทคโนโลยีต่าง ๆ เพื่อเอาชนะฝ่ายตรงข้ามโดยผู้เล่นจะต้องจัดการทรัพยากรและวางกลยุทธ์ในการต่อสู้
-            เพื่อให้สามารถพิชิตศัตรูได้ เกมนี้จะมีการออกแบบแผนที่ที่หลากหลายและมีความท้าทายในการเล่น ทำให้ผู้เล่นต้องคิดวางแผนอย่างรอบคอบก่อนที่จะตัดสินใจในการเคลื่อนที่หรือโจมตีฝ่ายตรงข้าม
-        </p>
-        <div class="work-container">
-        <img src="https://i.postimg.cc/tR2Kw32m/qrcode-270870389-a9c31e2838e719d3471dda9d070cf9e5.png" alt="เรียน Python">
-        </div>
-        
-            <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+    </footer>
+
 </body>
 </html>

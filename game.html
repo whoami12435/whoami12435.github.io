@@ -2,163 +2,153 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar */
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        /* Content */
-        .work-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-
-        .work-container img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .work-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 600px;
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Responsive */
-        @media (max-width: 1200px) {
-            .work-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .work-container img {
-                width: 80%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กิจกรรมเล่นเกม — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ HOBBIES</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าหลัก
+            </a>
+        </div>
     </nav>
 
-    <div class="work-container">
-        <img src="https://img-eshop.cdn.nintendo.net/i/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a.jpg" alt="เรียน Python">
-        <div class="work-text">
-            <h1>minecraft</h1>
-            <p>
-                minecraft เป็นเกมแนว sandbox ที่มีความอิสระสูง ผู้เล่นสามารถสร้างและสำรวจโลกที่ได้ตามจินตนาการของตนเอง ทำให้เป็นเกมที่ผมผ่อนคลาย ว่างๆก็จะเล่นเกมนี้เพื่อคลายเครียด
-                สร้างสรรค์สิ่งต่างๆตามจินตนาการของผมเอง ไม่ว่าจะเป็นการสร้างบ้าน สร้างเมือง หรือแม้กระทั่งการสร้างระบบอัตโนมัติต่างๆในเกม
-            </p>
-    </div>
-    </div>
-    <div class="work-container">
-        <img src="https://i.postimg.cc/fRvQCHhd/Screenshot-2025-11-19-180551.png" alt="เรียน Python">
-        <img src="https://i.postimg.cc/Nf13GNLH/Screenshot-2025-11-19-180616.png" alt="เรียน Python">
-    </div>
-    
-    <div class="work-container">
-        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3213850/5f0ed295e4dcc5714f43f27243107d95576f1d5a/capsule_616x353.jpg?t=1762657594" alt="เรียน Python">
-        <div class="work-text">
-            <h1>gogh focus with your avatar</h1>
-            <p>
-                gogh focus with your avatar เป็นเกมสบายๆฟังเพลงเพลินๆ และยังมีตัวจับเวลาในการโฟกัส และสามารถจัดเวลาต่างๆได้ตามที่เราต้องการ ช่วยในการโฟกัสทำงานหรืออ่านหนังสือ หรือสามารถเป็นเกมผ่อนคลายยฟังเพลงเฉยๆก็ได้ 
-                แถมสามารถสร้าง avatar ของเราเองในเกมได้อีกด้วย 
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Gaming &amp; Inspiration</span>
+            <h1 class="section-title">เกมโปรดและการเรียนรู้จากเกม</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การผ่อนคลายความเครียดควบคู่กับการศึกษากลไกการออกแบบเกม (Game Design)
             </p>
         </div>
-    </div>
-        <div class="work-container">
-        <img src="https://i.postimg.cc/3r6LM2Z6/Screenshot-2025-11-19-182528.png" alt="เรียน Python">
-        <img src="https://i.postimg.cc/hGPw4cQy/Screenshot-2025-11-19-182601.png" alt="เรียน Python">
-    </div>
-        <div class="work-container">
-        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2420510/bf8baa346b174a0d904e0940f993ada10a06d3ae/capsule_616x353.jpg?t=1740642230" alt="เรียน Python">
-        <div class="work-text">
-            <h1>holocure</h1>
-            <p>
-                holocure เป็นเกมแนว roguelike shoot'em up ที่มีตัวละครจากค่ายhololiveซึ่งเป็นค่ายที่ผมชอบมาก
-                เกมนี้มีความสนุกและท้าทายในการเล่น โดยผู้เล่นต้องควบคุมตัวละครเพื่อยิงศัตรูและหลบหลีกการโจมตีของพวกมัน
-                นอกจากนี้ยังมีระบบอัพเกรดตัวละครและอาวุธที่ทำให้เกมนี้น่าสนใจมากยิ่งขึ้น
-            </p>
+    </header>
+
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <!-- Minecraft -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">Minecraft — พื้นที่แห่งการสร้างสรรค์ที่ไร้ขีดจำกัด</h2>
+                    <p class="work-summary">
+                        Minecraft เป็นเกมแนว Sandbox ที่มอบอิสระสูงสุดให้ผู้เล่นได้สร้างและสำรวจโลกตามจินตนาการ เป็นเกมที่ผมใช้ผ่อนคลายและฝึกความคิดสร้างสรรค์ ไม่ว่าจะเป็นการสร้างสิ่งปลูกสร้าง หรือการออกแบบระบบอัตโนมัติ (Automation) ด้วย Redstone
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>Sandbox / Creative</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>สิ่งที่ชื่นชอบ</h4>
+                            <p>การสร้างระบบ Redstone Logic</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://img-eshop.cdn.nintendo.net/i/a28a81253e919298beab2295e39a56b7a5140ef15abdb56135655e5c221b2a3a.jpg" alt="Minecraft Cover" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/fRvQCHhd/Screenshot-2025-11-19-180551.png" alt="Minecraft Screenshot 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/Nf13GNLH/Screenshot-2025-11-19-180616.png" alt="Minecraft Screenshot 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Gogh Focus -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">Gogh: Focus with Your Avatar</h2>
+                    <p class="work-summary">
+                        เกมแนวชิลล์ฟังสบายที่มีตัวจับเวลาสไตล์ Pomodoro ช่วยเสริมสร้างสมาธิในการอ่านหนังสือและเขียนโปรแกรม พร้อมเสียงเพลงผ่อนคลาย และสามารถตกแต่ง Avatar ประจำตัวได้ตามต้องการ
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>Productivity / Relaxing</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ประโยชน์</h4>
+                            <p>ฝึกสมาธิในการทำงาน &amp; อ่านหนังสือ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/3213850/5f0ed295e4dcc5714f43f27243107d95576f1d5a/capsule_616x353.jpg?t=1762657594" alt="Gogh Cover" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/3r6LM2Z6/Screenshot-2025-11-19-182528.png" alt="Gogh Gameplay 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/hGPw4cQy/Screenshot-2025-11-19-182601.png" alt="Gogh Gameplay 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- HoloCure -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">HoloCure — Roguelike Action</h2>
+                    <p class="work-summary">
+                        เกมแนว Roguelike Shoot'em up ที่นำตัวละครจากค่าย Hololive มาสร้างสรรค์เป็นเกมที่มีความสนุก ท้าทาย และระบบอัปเกรดอาวุธที่หลากหลาย ทำให้ได้เรียนรู้การจัด Balance ของระบบเกม
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ประเภท</h4>
+                            <p>Roguelike / Bullet Hell</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>จุดเด่น</h4>
+                            <p>Game Loop &amp; Weapon Balance</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2420510/bf8baa346b174a0d904e0940f993ada10a06d3ae/capsule_616x353.jpg?t=1740642230" alt="HoloCure Cover" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/8C6yzcPn/Screenshot-2025-11-19-183657.png" alt="HoloCure 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/63Kh6hPC/Screenshot-2025-11-19-184156.png" alt="HoloCure 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
         </div>
-    </div>
-        <div class="work-container">
-        <img src="https://i.postimg.cc/8C6yzcPn/Screenshot-2025-11-19-183657.png" alt="เรียน Python">
-        <img src="https://i.postimg.cc/63Kh6hPC/Screenshot-2025-11-19-184156.png" alt="เรียน Python">
-    </div>
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— Gaming</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
+        </div>
+    </footer>
+
 </body>
 </html>

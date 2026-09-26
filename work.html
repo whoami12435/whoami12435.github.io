@@ -1,119 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="th">
 <head>
-    <title>My Works</title>
     <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: sans-serif;
-            margin: 0;
-            background: #f0f0f0;
-        }
-        header {
-            background: #333;
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        nav {
-            background: #222;
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #444;
-        }
-        section {
-            background: white;
-            max-width: 800px;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            text-align: center;
-            color: #333;
-        }
-        .work-item {
-            margin: 20px 0;
-            padding: 15px;
-            border-left: 5px solid #007bff;
-            background: #f9f9f9;
-            border-radius: 8px;
-        }
-        .work-item h3 {
-            margin: 0 0 10px;
-            color: #007bff;
-        }
-        .work-item p {
-            margin: 0;
-            color: #555;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #666;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานด้านวิชาการ — Danai Thep</title>
+    <meta name="description" content="ผลงานการแข่งขัน รางวัล และการอบรมด้านคอมพิวเตอร์และวิชาการ ของดนัยเทพ แซ่ตั้ง">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
+    <!-- Navigation Bar -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ PORTFOLIO</span>
+            </a>
 
-    <!-- Navigation -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+            <button class="nav-mobile-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link active">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+
+            <a href="index.html#contact" class="nav-cta">
+                <i class="fa-regular fa-paper-plane"></i> ติดต่อฉัน
+            </a>
+        </div>
     </nav>
 
-    <!-- Works Section -->
-    <section>
-        <h1>📂 ผลงานของผม</h1>
-
-        <div class="work-item">
-            <img src="https://i.postimg.cc/CL861djr/Screenshot-2025-06-13-144752.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>เข้าร่วมอบรม โอลิมปิกวิชาการ ค่าย 2 สาขาคอมพิวเตอร์</h3>
-            <p>การที่เข้า สอวน. คอมพิวเตอร์เป็นสิ่งที่กระผมภาคภูมิใจและชื่นชอบเพราะว่าทำให้ผมพบกับประสบการณ์ เพื่อนใหม่ ความรู้ใหม่ๆ ได้พูดคุยกับอาจาร์ยมหาลัย แม้ว่าผมไม่สามารถผ่านเป็นผู้แทนได้ เนื่องจาก นี้คือครั้งแรกที่ผมเข้า สอวน. คอมพิวเตอร์ ทำให้ยังไม่สามารถปรับตัวได้ทัน แต่ผมนำความรู้ที่ผมได้รับไปปรับใช้โดย กระบวนการคิดที่เป็นระบบมากยิ่งขึ้น  </p>
+    <!-- Header Section -->
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Academic &amp; Competitions</span>
+            <h1 class="section-title">ผลงานด้านวิชาการและการแข่งขัน</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                บันทึกการเข้าร่วมแข่งขันค่ายโอลิมปิกวิชาการ งานประกวดนวัตกรรม Hackathon และการแก้ปัญหาด้วยเทคโนโลยี
+            </p>
         </div>
+    </header>
 
-        <div class="work-item">
-            <img src="https://i.postimg.cc/1R6FjyFY/AIfor-Next-Gen-Certificate-Page16.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>เข้าร่วมงาน พลิกโฉมท่องเที่ยวยุคใหม่ ai for next gen เมื่อ วันที่ 24-25 พฤษภาคม ปี 2568</h3>
-            <p> งานนี้กระผมได้รับความรู้เพิ่มเติมด้านการเขียนพรอมต์ ai และได้รับรู้เว็ปไชต์ที่สามารถร้างเว็ปไชต์ได้ เช่น Lovable ในการสร้าง front-end , make.com ในการเป็น back-end ค่อยเชื่อมข้อมูลต่างๆ และประสบการณ์ในการทำงานเป็นทีม ในการสร้างเว็ป โดยผมรับหน้าที่ทำ back-end</p>
+    <!-- Work List Section (cagd.as 2-column layout) -->
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <!-- Item 1: POSN Camp 2 -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        เข้าร่วมอบรม โอลิมปิกวิชาการ ค่าย 2 สาขาคอมพิวเตอร์
+                    </h2>
+                    <p class="work-summary">
+                        การที่ได้เข้า สอวน. คอมพิวเตอร์เป็นสิ่งที่กระผมภาคภูมิใจและชื่นชอบเป็นอย่างยิ่ง ทำให้ได้พบกับประสบการณ์ เพื่อนใหม่ และองค์ความรู้เชิงลึกด้านกระบวนการคิดที่เป็นระบบ
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โครงการ</h4>
+                            <p>สอวน. คอมพิวเตอร์</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ระดับ</h4>
+                            <p>ค่าย 2 มหาวิทยาลัยสงขลานครินทร์</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาษา</h4>
+                            <p>C / C++ Programming</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ปี</h4>
+                            <p>2567</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>ประสบการณ์ที่ได้รับ</h4>
+                        <p>
+                            ได้เรียนรู้ร่วมกับอาจารย์ระดับมหาวิทยาลัย แม้ว่ายังไม่สามารถเป็นผู้แทนศูนย์ได้เนื่องจากเป็นการลงแข่งครั้งแรก แต่กระผมได้นำองค์ความรู้ที่ได้รับมาปรับใช้ในการคิดวิเคราะห์เชิงระบบ การเขียนโปรแกรม และต่อยอดสร้างสรรค์สื่อการสอนแบ่งปันความรู้ให้แก่เพื่อนๆ และน้องๆ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/CL861djr/Screenshot-2025-06-13-144752.png" 
+                             alt="เกียรติบัตร สอวน. คอมพิวเตอร์ ค่าย 2" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 2: SIITec Hackathon Gold -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        รางวัลเหรียญทอง SIITec AI &amp; Robot arm Hackathon (SARAH) #1
+                    </h2>
+                    <p class="work-summary">
+                        การแข่งขันงาน SIITec AI &amp; Robot Arm Hackathon ภายใต้โครงการ SIITec Hackathon นำเทคโนโลยี CiRa Core เชื่อมต่อระบบประมวลผล AI กับแขนหุ่นยนต์
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โครงการ</h4>
+                            <p>SIITec Hackathon #1</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>รางวัล</h4>
+                            <p style="color: #fbbf24; font-weight: 700;">เหรียญทอง (Gold Medal)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>หัวหน้ากลุ่ม (Team Lead)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>เครื่องมือ</h4>
+                            <p>CiRa Core &amp; AI Integration</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>บทบาทและผลลัพธ์</h4>
+                        <p>
+                            กระผมทำหน้าที่เป็นหัวหน้ากลุ่ม แบ่งหน้าที่ให้แก่เพื่อนในทีม ลงและลากเชื่อมต่อ Code Box คอยสร้าง Logic ในการทำงาน และช่วยแก้ไขปัญหาเมื่อเพื่อนในทีมติดขัด สิ่งที่ได้รับคือความเข้าใจการประยุกต์ใช้ CiRa Core ควบคุมฮาร์ดแวร์จริงและสร้างเครือข่ายเพื่อนใหม่
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/Cx2mPQj2/nay-dn-ytheph-sae-t-ng.png" 
+                             alt="รางวัลเหรียญทอง SIITec Hackathon" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 3: AI for Next Gen -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        งานพลิกโฉมท่องเที่ยวยุคใหม่ AI FOR NEXTGEN Workshop &amp; Hackathon
+                    </h2>
+                    <p class="work-summary">
+                        การแข่งขันและอบรมเชิงปฏิบัติการ วันที่ 24-25 พฤษภาคม 2568 มุ่งเน้นการสร้างสรรค์เว็บไซต์นวัตกรรมด้วยพลัง AI และระบบ Automation
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โครงการ</h4>
+                            <p>AI for Next Gen Hackathon</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>Back-end Developer &amp; Data Flow</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>เครื่องมือ</h4>
+                            <p>Lovable, Make.com, AI Prompting</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ช่วงเวลา</h4>
+                            <p>24-25 พฤษภาคม 2568</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียดโครงงาน</h4>
+                        <p>
+                            ได้รับความรู้ด้านการออกแบบ Prompt สำหรับโมเดล AI และการใช้เครื่องมือทันสมัย อาทิ Lovable ในการขึ้นโครงสร้าง Front-end และ Make.com ในการทำ Back-end Automation เชื่อมต่อข้อมูล ช่วยเพิ่มทักษะการทำงานร่วมกันเป็นทีมแบบ Agile
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/1R6FjyFY/AIfor-Next-Gen-Certificate-Page16.png" 
+                             alt="เกียรติบัตร AI for Next Gen" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 4: CUBS BLOCKATHON -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        CUBS BLOCKATHON The Next Gen Business Innovation
+                    </h2>
+                    <p class="work-summary">
+                        การแข่งขันแผนธุรกิจและนวัตกรรม วันที่ 9-25 กรกฎาคม 2567 เรียนรู้การผสานเทคโนโลยีเข้ากับกลยุทธ์เชิงธุรกิจ
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>การแข่งขัน</h4>
+                            <p>CUBS BLOCKATHON</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>รองหัวหน้าทีม (Co-Leader)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>หน้าที่</h4>
+                            <p>ตรวจทานความถูกต้อง &amp; เขียนแผนธุรกิจ</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ช่วงเวลา</h4>
+                            <p>กรกฎาคม 2567</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>ประสบการณ์</h4>
+                        <p>
+                            ได้เรียนรู้กระบวนการเขียนแผนธุรกิจที่ตอบโจทย์ตลาดจริง ฝึกทักษะการเจรจาปรึกษาหารือในทีมเพื่อคัดเลือกทางออกที่ดีที่สุด รับหน้าที่เป็นรองหัวหน้าทีมช่วยกำกับเนื้อหาและความถูกต้องของโมเดลธุรกิจ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/rshwbLm5/Screenshot-2025-09-14-175955.png" 
+                             alt="เกียรติบัตร CUBS BLOCKATHON" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Item 5: Change Education Bronze -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">
+                        รางวัลเหรียญทองแดง โครงการ Change Education
+                    </h2>
+                    <p class="work-summary">
+                        การแข่งขันสร้างสรรค์สื่อวิดีโอนวัตกรรมทางการศึกษา วันที่ 15 เมษายน - 30 กรกฎาคม 2567 คว้าเหรียญทองแดง
+                    </p>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โครงการ</h4>
+                            <p>Change Education 2024</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>รางวัล</h4>
+                            <p style="color: #cd7f32; font-weight: 700;">เหรียญทองแดง (Bronze Medal)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ตัดต่อวิดีโอ &amp; ประสานงานฝ่ายภาพ</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ทักษะ</h4>
+                            <p>Video Editing &amp; Storyboarding</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียด</h4>
+                        <p>
+                            รับหน้าที่เป็นผู้ประสานงานเรื่องมุมกล้อง บทภาพยนตร์ และตัดต่อคลิปวิดีโอส่งเข้าแข่งขัน พัฒนาทักษะการเล่าเรื่อง (Storytelling) และการสื่อสารเนื้อหาที่ซับซ้อนให้เข้าใจง่ายผ่านสื่อมัลติมีเดีย
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/SxSLzjsz/CIA2024-33-4.png" 
+                             alt="เกียรติบัตรเหรียญทองแดง Change Education" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
         </div>
+    </main>
 
-        <div class="work-item">
-            <img src="https://i.postimg.cc/rshwbLm5/Screenshot-2025-09-14-175955.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>เข้าร่วม CUBS BLOCKATHON The Next Gen Business Innovation วันที่ 9-25 กรกฏาคม ปี 2567</h3>
-            <p>กระผมได้เรียนรู้งานเขียนแผนธุรกิจ จากการที่ผมต้องเขียนธุรกิจและได้รับประสบการณ์การทำงานเป็นทีม ที่มาการปรึษาหารือกัน และเลือกผลลัพธ์ที่ดีที่สุด โดยผมเป็นรองหัวหน้า ค่อยดูความถูกต้อง และเขียนแผนธุรกิจ</p>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                DANAITEP. <span>— Academic Works</span>
+            </div>
+            <div class="footer-copy">
+                แก้ไขล่าสุด: 12/16/2025 | ออกแบบและปรับปรุงสไตล์ cagd.as
+            </div>
         </div>
-                <div class="work-item">
-            <img src="https://i.postimg.cc/SxSLzjsz/CIA2024-33-4.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ได้รับเหรียญทองแดงหลังการเข้าร่วมงาน change education วันที่ 15 เมษายน - 30 กรกฏาคม ปี 2567</h3>
-            <p>กระผมได้รับความรู้เสริมเนื่องจากต้องพัฒนาตัวเองในการตัดคริปวิดิโอส่งแข่ง และประสบการณ์การทำงานเป็นทีมในการที่ผมเป็นคนประสานงานเรื่อง มุมกล้องและบทของวิดิโอ โดยกระผมรับหน้าที่ในการตรวจงาน และตัดคริปวิดิโอ</p>
+    </footer>
 
-        <div class="work-item">
-            <img src="https://i.postimg.cc/Cx2mPQj2/nay-dn-ytheph-sae-t-ng.png" alt="Work Image" style="width:100%; border-radius:8px; margin-bottom:10px;">
-            <h3>ได้รับรางวัลเหรียญทอง SIITec AI & Robot arm Hackathon (SARAH) #1 ภายใต้โครงการ SIITec Hackathon</h3>
-            <p>กระผมทำการแข่งขันงาน SIITec AI & Robot Arm Hackathon (SARAH) #1 กระผมได้เรียนรู้เกี่ยวกับการใช้ CiRa Core ในการปรับยุกต์ใช้กับแขนหุ่นยนต์ และ การแทรน AI โดยกระผมทำหน้าที่เป็นหัวหน้ากลุ่ม โดยผมจะแบ่งหน้าที่ให้กับคนในกลุ่ม กระผมมีหน้าที่ ลงและลากเชื่อมต่อ code box คอยทำ logic ในการทำงาน และคอยช่วยเมื่อเพื่อนเมื่อมีปัญหา สิ่งที่กระผมได้รับจากการเข้าร่วมงานในครั้งนี้คือ การที่ผมได้ เข้าใจหลัการใช้ CiRa Core เบื้องต้น ได้รู้จักเพื่อนใหม่ และพี่ๆ </p>
-        </div>
-        <footer>แก้ไขล่าสุด 12/16/2025.</footer>
-
+    <script>
+        const mobileBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>
-

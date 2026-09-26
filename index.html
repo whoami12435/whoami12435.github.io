@@ -2,277 +2,551 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Web Portfolio</title>
-    <meta name="viewport" content="web portfolio">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danai Thep — Portfolio</title>
+    <meta name="description" content="พอร์ตโฟลิโอ ดนัยเทพ แซ่ตั้ง นักเรียนและนักพัฒนา โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล">
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <style>
-        body {
-            font-family: "Segoe UI", sans-serif;
-            margin: 0;
-            color: #fff;
-            background: url('https://i.pinimg.com/originals/19/10/63/191063a8fc5a4da4eccdb6e406c52089.gif') 
-                        no-repeat center center fixed;
-            background-size: cover;
-            position: relative;
-        }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.45);
-            z-index: -1;
-        }
-
-        header {
-            background: rgba(0,0,0,0.7);
-            color: white;
-            padding: 15px 0;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-        }
-
-        nav {
-            background: rgba(0,0,0,0.6);
-            padding: 10px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
-
-        section {
-            background: rgba(255,255,255,0.1);
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 40px 30px;
-            border-radius: 16px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            text-align: center;
-            backdrop-filter: blur(8px);
-        }
-
-        .profile {
-            display: block;
-            margin: 0 40 30px;
-            border-radius: 50%;
-            width: 180px;
-            height: 180px;
-            object-fit: cover;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-        }
-        
-
-        .icon_profile {
-            display: block;
-            margin: 0 auto 10px;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            object-fit: cover;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-
-        h1, h2 {
-            color: #fff;
-        }
-
-        p {
-            color: #ddd;
-            line-height: 1.6;
-            margin: 0 auto 20px;
-            max-width: 600px;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .skill-badge {
-            background: rgba(255,255,255,0.15);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            font-size: 15px;
-            font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(4px);
-            text-decoration: none;
-        }
-
-        .skill-badge i {
-            font-size: 18px;
-            color: #00bfff;
-        }
-
-        .skill-badge:hover {
-            transform: translateY(-4px);
-            background: #00bfff;
-            color: white;
-        }
-
-        .skill-badge:hover i {
-            color: white;
-        }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            gap: 80px;
-            flex-wrap: wrap;
-        }
-
-        .contact-item {
-            background: rgba(255,255,255,0.15);
-            border-radius: 16px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-            padding: 20px;
-            text-align: center;
-            width: 200px;
-            backdrop-filter: blur(6px);
-            transition: 0.3s;
-        }
-
-        .contact-item:hover {
-            background: rgba(255,255,255,0.3);
-        }
-
-        .contact-item p {
-            margin: 8px 0;
-            color: #fff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #ccc;
-            margin-top: 50px;
-        }
-    </style>
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
+    <!-- ==========================================================================
+         NAVIGATION BAR (CAGD.AS STYLE)
+         ========================================================================== -->
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ PORTFOLIO</span>
+            </a>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+            <button class="nav-mobile-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link active">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="#skills" class="nav-link">ทักษะ</a></li>
+                <li><a href="#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+
+            <a href="#contact" class="nav-cta">
+                <i class="fa-regular fa-paper-plane"></i> ติดต่อฉัน
+            </a>
+        </div>
     </nav>
 
-    <section>
-<div style="display: flex; align-items: flex-start; gap: 10px;">
-    <img class="profile" src="https://i.postimg.cc/yd0bdBTR/0ef2ffce-faa4-4c3c-9b3b-83aef526c7e2.jpg" alt="รูปโปรไฟล์" width="80" height="80">
-    <div style="text-align: left;">
-<h1 style="font-size: 28px; line-height: 5;">ดนัยเทพ แซ่ตั้ง ชั้นมัธยมศึกษาปีที่ 6</h1>
-    
-    </div>
-</div>
+    <!-- ==========================================================================
+         HERO SECTION (CAGD.AS STYLE WITH SMOOTH VIGNETTE PORTRAIT)
+         ========================================================================== -->
+    <header class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    ดนัยเทพ แซ่ตั้ง — <br>
+                    <span class="highlight">นักพัฒนา &amp; สร้างสรรค์</span> นวัตกรรมเทคโนโลยี
+                </h1>
 
-        <div>
-<p>กระผมนายดนัยเทพ แซ่ตั้ง ซื่อเล่นห่าน กำลังศึกษาที่โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ที่บ้านของผม ผู้ปกครองท่านซื้อคอมพิวเตอร์ให้ตั้งแต่ยังเด็ก ทำให้ผมมีความชื่นชอบและพยายามศึกษาหาข้อมูลเกี่ยวกับเทคโนโลยีคอมพิวเตอร์ แต่ทว่าผมมีความชื่นชอบแต่ไม่ใช้ความฝัน จนกระทั้งผมเจอ ยูทูบเบอร์คนหนึ่ง ตอน ม5 ทำให้เป็นมีความฝันและความตั้งใจ ยูทูบเบอร์คนนั้นคือคุณธนานนท์ ปฏิญญาศักดิกุล หรือ รู้จักในนามของ 9arm ผมได้มีฝัน และเริ่มทำตามความฝันโดย เริ่มจากการอ่านหนังสือจนสามารถติด สอวน. ได้ในปี 2567 จนถึงเข้าร่วมการอบรมค่าย 2 ถึงไม่สามารถเป็นผู้แทนศูนย์ได้ แต่ผมก็ยังศึกษาพัฒนาตัวเองต่อไป และนำความรู้ที่ผมได้รับไปปรับใช้และส่งต่อให้กับผู้อื่น ผมได้ทำช่อง ยูทูบ สอนเนื้อหาเทียบเท่ากับค่าย 2 ความรู้คอมพิวเตอร์ทั่วไป วงจร และระบบ iot เพื่อเป็นประโยชน์ให้กับผู้อื่น ต่อมาผมได้ทำการเข้าร่วมการต่างๆที่เกี่ยวกับคอมพิวเตอร์ได้แก่เข้าร่วมงาน AI FOR NEXTGEN Workshop & Hackathon สร้างเว็ปไซต์จาก ai , เข้าร่วมการตอบคำถาม ICT Challenge
-    กระผมได้มีโอกาศได้ทำงานร่วมกับคณะฝ่ายโสตศึกษาของโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล รับทำหน้าที่เป็นประฐานชุมนุมโสต กระผมได้เอาความรู้และประสบการณ์ที่ได้มาจากการเรียนรู้ด้วยตัวเองและจากการเข้่าร่วมงานต่างๆ สร้างแอปพลิเคชัน การยืมของห้องโสตผ่าน appsheet เพื่อแก้ปัญหาการยืมแล้วลืมคืน ,มีส่วนช่วยในการพัฒนาเว็ปเปิดกิจกรรมในงาน TJ-FIS 2024 (THAILAND - JAPAN STUDENT ICT FAIR 2024 ) และมีโปรเจ็คส่วนตัวคือกำลังพัฒนาเกม 2 เกมใน unity ทำให้กระผมมั่นใจว่ามีความชื่นชอบเกี่ยวกับการเขียนโปรแกรมเป็นอย่างมาก และตอนนี้กระผมมีความสนใจที่จะศึกษาเนื้อหาเกี่ยวกับ Data science ,ระบบ IoT (Internet of Things) เพราะเนื้อหาเหล่านี้ผมสามารถนำมาไปยุกต์ใช้ สร้าง
-นวัฒกรรมให้แก่ประเทศไทย
-</p>
+                <p class="hero-bio">
+                    นายดนัยเทพ แซ่ตั้ง (ห่าน) นักเรียนชั้นมัธยมศึกษาปีที่ 6 โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล 
+                    อดีตผู้ผ่านการอบรมค่าย 2 สอวน. คอมพิวเตอร์ มุ่งเน้นการศึกษาค้นคว้าด้าน Computer Science, Data Science, IoT และ Game Development เพื่อสร้างนวัตกรรมที่มีคุณค่า
+                </p>
+
+                <!-- Status Pill & Live Clock (cagd.as style) -->
+                <div class="hero-status-bar">
+                    <div class="status-pill">
+                        <span class="pulse-dot"></span>
+                        <span>พร้อมเปิดรับโอกาสและการเรียนรู้ใหม่ๆ</span>
+                    </div>
+                    <span class="status-divider">–</span>
+                    <div class="hero-location-time">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>Satun, Thailand 🇹🇭</span>
+                        <span id="hero-clock" style="font-variant-numeric: tabular-nums; font-weight: 500;">00:00:00</span>
+                    </div>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn-primary">
+                        ดูผลงานทั้งหมด <i class="fa-solid fa-arrow-down-long"></i>
+                    </a>
+                    <a href="#about" class="btn-link-underline">
+                        เกี่ยวกับตัวผม <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Portrait visual blending into black -->
+            <div class="hero-visual">
+                <div class="portrait-wrapper">
+                    <img src="https://i.postimg.cc/yd0bdBTR/0ef2ffce-faa4-4c3c-9b3b-83aef526c7e2.jpg" 
+                         alt="ดนัยเทพ แซ่ตั้ง" class="portrait-img">
+                    <div class="portrait-overlay"></div>
+                    <div class="portrait-badge">
+                        <div>
+                            <div class="portrait-badge-name">ดนัยเทพ แซ่ตั้ง (ห่าน)</div>
+                            <div class="portrait-badge-role">Student &amp; Developer</div>
+                        </div>
+                        <i class="fa-solid fa-code" style="color: var(--accent-blue-light);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================================================
+         ABOUT NARRATIVE SECTION
+         ========================================================================== -->
+    <section id="about" class="section">
+        <div class="section-header">
+            <span class="section-tag">About Me</span>
+            <h2 class="section-title">เรื่องราวและแรงบันดาลใจ</h2>
         </div>
 
-        
+        <div style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: 24px; padding: 40px 36px; max-width: 900px; margin: 0 auto;">
+            <p style="font-size: 1.12rem; color: var(--text-secondary); line-height: 1.9; margin-bottom: 24px;">
+                กระผมนายดนัยเทพ แซ่ตั้ง ชื่อเล่นห่าน กำลังศึกษาที่โรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ที่บ้านของผม ผู้ปกครองได้ซื้อคอมพิวเตอร์ให้ตั้งแต่ยังเด็ก ทำให้ผมมีความชื่นชอบและพยายามศึกษาหาข้อมูลเกี่ยวกับเทคโนโลยีคอมพิวเตอร์ แต่ทว่าความชอบนั้นยังไม่ได้กลายเป็นความฝัน จนกระทั่งตอน ม.5 ผมได้ชมผลงานของคุณธนานนท์ ปฏิญญาศักดิกุล หรือที่รู้จักในนาม <strong>9arm</strong> ทำให้ผมเกิดแรงบันดาลใจและความมุ่งมั่นอย่างแท้จริง
+            </p>
+            <p style="font-size: 1.12rem; color: var(--text-secondary); line-height: 1.9; margin-bottom: 24px;">
+                ผมเริ่มทำตามความฝันโดยทุ่มเทอ่านหนังสือจนสามารถสอบติด <strong>สอวน. คอมพิวเตอร์ ในปี 2567 จนผ่านเข้าร่วมการอบรมค่าย 2</strong> แม้จะไม่สามารถเป็นผู้แทนศูนย์ได้ แต่ผมยังคงพัฒนาตนเองอย่างต่อเนื่อง พร้อมนำความรู้ที่ได้รับมาส่งต่อให้ผู้อื่น โดยทำช่อง YouTube สอนเนื้อหาคอมพิวเตอร์เทียบเท่าค่าย 2 พื้นฐานวงจร และระบบ IoT
+            </p>
+            <p style="font-size: 1.12rem; color: var(--text-secondary); line-height: 1.9;">
+                นอกจากนี้ ผมยังได้รับหน้าที่เป็น<strong>ประธานชุมนุมโสตทัศนศึกษา</strong> พัฒนาแอปพลิเคชันบันทึกการยืมอุปกรณ์ผ่าน AppSheet แก้ปัญหาของโรงเรียน มีส่วนช่วยพัฒนาเว็บไซต์เปิดกิจกรรมในงาน TJ-FIS 2024 และกำลังพัฒนาเกม 2 เกมด้วย Unity Engine ความฝันต่อไปคือการศึกษาต่อยอดในสาขา Computer Science, Data Science และ IoT เพื่อนำเทคโนโลยีมาสร้างนวัตกรรมให้แก่ประเทศไทย
+            </p>
+        </div>
     </section>
-<section>
-    <h1>ทักษะของผม</h1>
-    <p>สามารถกดเข้าไปดูได้</p>
-    <div class="skills">
-        <a href="C.html" class="skill-badge">
-            <i class="fa-solid fa-code"></i> C
-        </a>
-        <a href="C++.html" class="skill-badge">
-            <i class="fa-solid fa-code"></i> C++
-        </a>
-        <a href="python.html" class="skill-badge">
-            <i class="fa-brands fa-python"></i> Python
-        </a>
-        <a href="unity.html" class="skill-badge">
-            <i class="fa-brands fa-unity"></i> Unity
-        </a>
-        <a href="web development.html" class="skill-badge">
-            <i class="fa-brands fa-html5"></i> Web Development
-        </a>
-        <a href="photograher.html" class="skill-badge">
-            <i class="fa-solid fa-camera"></i> Photographer
-        </a>
-        <a href="Game programming.html" class="skill-badge">
-            <i class="fa-brands fa-csharp"></i> C# Game Programming
-        </a>
-    </div>
-</section>
-<section>
-    <h1>กิจกรรมเวลาว่าง</h1>
-    <p>กิจกรรมที่ผมชอบทำเวลาว่าง</p>
-    <div class="skills">
-        <a href="game.html" class="skill-badge">
-            <i class="fa-solid fa-gamepad"></i> เล่นเกม
-        <a href="youtube.html" class="skill-badge">
-            <i class="fa-solid fa-video"></i> ดูยูทูป
 
+    <!-- ==========================================================================
+         SELECTED WORKS (CAGD.AS 2-COLUMN SPLIT SHOWCASE)
+         ========================================================================== -->
+    <section id="portfolio" class="section">
+        <div class="section-header">
+            <span class="section-tag">Featured Works</span>
+            <h2 class="section-title">ผลงานเด่นที่ภาคภูมิใจ</h2>
+        </div>
 
-        <a href="game dev.html" class="skill-badge">
-            <i class="fa-solid fa-music"></i> พัฒนาเกม
-</a>
-    </div>
-</section>
-    <section>
-        <h1>ช่องทางการติดต่อ</h1>
-        <div class="contact-container">
+        <div class="work-list">
 
-            <a href="https://www.facebook.com/dnay.theph.s.tang" target="_blank" class="contact-item">
-                <img class="icon_profile" src="https://i.postimg.cc/3xL1tPKN/com-facebook-katana-icon-2024-12-27-21-01-37.png" alt="facebook icon">
-                <p><strong>Facebook</strong></p>
-                <p>ดนัยเทพ แซ่ตั้ง</p>
+            <!-- Work Item 1: POSN Camp 2 -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h3 class="work-heading">
+                        ผ่านการอบรมโอลิมปิกวิชาการ สอวน. ค่าย 2 สาขาคอมพิวเตอร์
+                    </h3>
+                    <p class="work-summary">
+                        ก้าวสู่ระดับค่าย 2 สอวน. คอมพิวเตอร์ มหาวิทยาลัยสงขลานครินทร์ เสริมสร้างพื้นฐาน Algorithms, Data Structures และการคิดเชิงระบบ
+                    </p>
+                    
+                    <div class="work-actions">
+                        <a href="work.html" class="btn-work">
+                            <span>ดูผลงานวิชาการทั้งหมด</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>โครงการ</h4>
+                            <p>สอวน. คอมพิวเตอร์ (POSN)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ระดับ</h4>
+                            <p>ผู้เข้ารับการอบรมค่าย 2</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ภาษาที่ใช้</h4>
+                            <p>C / C++ Programming</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ปีการศึกษา</h4>
+                            <p>2567</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียดและความมุ่งมั่น</h4>
+                        <p>
+                            การได้เข้า สอวน. คอมพิวเตอร์ เป็นสิ่งที่ผมภาคภูมิใจมาก ได้พบกับประสบการณ์ เพื่อนใหม่ ความรู้ใหม่ๆ และได้พูดคุยกับอาจารย์มหาวิทยาลัย แม้เป็นครั้งแรกแต่ผมได้นำทักษะด้านกระบวนการคิดที่เป็นระบบมาต่อยอดทำคลิปวิดีโอสอนบน YouTube และช่วยงานโครงงานเพื่อนๆ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/CL861djr/Screenshot-2025-06-13-144752.png" 
+                             alt="เกียรติบัตร สอวน. คอมพิวเตอร์ ค่าย 2" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Work Item 2: SIITec Hackathon Gold Medal -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h3 class="work-heading">
+                        รางวัลเหรียญทอง SIITec AI &amp; Robot Arm Hackathon (SARAH) #1
+                    </h3>
+                    <p class="work-summary">
+                        การแข่งขันพัฒนาโปรแกรมควบคุมแขนหุ่นยนต์อุตสาหกรรมร่วมกับการเทรน AI ด้วย CiRa Core คว้าชัยชนะในระดับเหรียญทอง
+                    </p>
+                    
+                    <div class="work-actions">
+                        <a href="work.html" class="btn-work">
+                            <span>อ่านรายละเอียดการแข่งขัน</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>การแข่งขัน</h4>
+                            <p>SIITec Hackathon #1</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>รางวัล</h4>
+                            <p style="color: #fbbf24;">เหรียญทอง (Gold Medal)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>หัวหน้าทีม &amp; Logic Architect</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>เทคโนโลยี</h4>
+                            <p>CiRa Core, AI Model, Robotics</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>รายละเอียดการดำเนินงาน</h4>
+                        <p>
+                            ทำหน้าที่เป็นหัวหน้าทีม แบ่งภาระงาน ออกแบบตรรกะการทำงาน (Logic Flow) เชื่อมโยง Code Box ใน CiRa Core และร่วมเทรน AI เพื่อสั่งการแขนกลหุ่นยนต์อย่างแม่นยำ พร้อมแก้ไขปัญหาเฉพาะหน้าร่วมกับเพื่อนในทีม
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/Cx2mPQj2/nay-dn-ytheph-sae-t-ng.png" 
+                             alt="เกียรติบัตรเหรียญทอง SIITec Hackathon" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <!-- Work Item 3: AppSheet Equipment Borrowing System -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h3 class="work-heading">
+                        ระบบบันทึกการยืม-คืนอุปกรณ์ห้องโสตทัศนูปกรณ์ด้วย AppSheet
+                    </h3>
+                    <p class="work-summary">
+                        แก้ปัญหาการลืมคืนอุปกรณ์และลดการใช้ทรัพยากรกระดาษภายในโรงเรียน จ.ภ. สตูล สู่การจัดการบนคลาวด์แบบ Real-time
+                    </p>
+                    
+                    <div class="work-actions">
+                        <a href="working project-1.html" class="btn-work">
+                            <span>ดูโปรเจกต์เต็ม</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>หน่วยงาน</h4>
+                            <p>ชุมนุมโสตศึกษา จ.ภ. สตูล</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>ประธานชุมนุม &amp; Lead Dev</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>แพลตฟอร์ม</h4>
+                            <p>Google AppSheet, Sheets Cloud</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ผลลัพธ์</h4>
+                            <p>ใช้งานจริงในโรงเรียน</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>เบื้องหลังการพัฒนา</h4>
+                        <p>
+                            ในฐานะประธานฝ่ายโสต ได้เล็งเห็นปัญหาความล่าช้าและการสูญหายของอุปกรณ์ จึงออกแบบระบบบันทึกข้อมูลดิจิทัลที่เข้าถึงได้ผ่านสมาร์ตโฟน ช่วยให้ทีมงานตรวจสอบสถานะอุปกรณ์ได้แบบ Real-time
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/FzNZk6fH/Screenshot-2025-10-30-185006.png" 
+                                 alt="AppSheet Interface 1" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/fLZX89Mp/Screenshot-2025-10-30-185021.png" 
+                                 alt="AppSheet Interface 2" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Work Item 4: The Memory Seeker Unity Game -->
+            <article class="work-card">
+                <div class="work-info">
+                    <h3 class="work-heading">
+                        The Memory Seeker — เกมผจญภัยแก้ปริศนาในโลก 2.5D
+                    </h3>
+                    <p class="work-summary">
+                        เกมแนวผจญภัยสไตล์ 2D Character ในฉาก 3D สภาพแวดล้อมแฟนตาซี เพื่อค้นหาความทรงจำที่สาบสูญ พัฒนาด้วย Unity Engine
+                    </p>
+                    
+                    <div class="work-actions">
+                        <a href="working project-1.html" class="btn-work">
+                            <span>ดูภาพตัวอย่างเกม</span> <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>เอนจิน</h4>
+                            <p>Unity Engine (C#)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>แนวเกม</h4>
+                            <p>2.5D Adventure &amp; Puzzle</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>สถานะ</h4>
+                            <p>In Development (Alpha)</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>บทบาท</h4>
+                            <p>Solo Game Developer</p>
+                        </div>
+                    </div>
+
+                    <div class="work-details-desc">
+                        <h4>จุดเด่นและแนวคิด</h4>
+                        <p>
+                            เน้นการออกแบบบรรยากาศและเรื่องราวที่น่าติดตาม เคยเปิดให้กลุ่มเพื่อนทดสอบในระดับ Alpha Tester และได้รับเสียงตอบรับเป็นอย่างดี กำลังขยายสเกลของแผนที่และขัดเกลากลไก Puzzle ให้สมบูรณ์แบบ
+                        </p>
+                    </div>
+                </div>
+
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/j2LzB6ZM/Screenshot-2025-11-03-170643.png" 
+                             alt="The Memory Seeker Screenshot" loading="lazy">
+                    </div>
+                    <div class="gallery-grid-2">
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/WzjFjGNW/Screenshot-2025-11-03-165044.png" 
+                                 alt="The Memory Seeker Gameplay" loading="lazy">
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://i.postimg.cc/26Tmbhd5/Screenshot-2025-11-03-165229.png" 
+                                 alt="The Memory Seeker Map" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         SKILLS & TECHNOLOGIES
+         ========================================================================== -->
+    <section id="skills" class="section">
+        <div class="section-header">
+            <span class="section-tag">Skills &amp; Capabilities</span>
+            <h2 class="section-title">ทักษะและความเชี่ยวชาญ</h2>
+        </div>
+
+        <div class="skills-grid">
+            <a href="C.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-c"></i></div>
+                <div class="skill-info">
+                    <h3>ภาษา C</h3>
+                    <span>สอวน. ค่าย 1-2 &amp; IoT Project</span>
+                </div>
             </a>
 
-            <a href="https://www.instagram.com/danaitep_saetang_" target="_blank" class="contact-item">
-                <img class="icon_profile" src="https://i.postimg.cc/xjmcg7Gn/Instagram-logo-2022-svg.png" alt="instagram icon">
-                <p><strong>Instagram</strong></p>
-                <p>@danaitep_saetang_</p>
+            <a href="C++.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-code"></i></div>
+                <div class="skill-info">
+                    <h3>ภาษา C++</h3>
+                    <span>Competitive Programming</span>
+                </div>
+            </a>
+
+            <a href="python.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-brands fa-python"></i></div>
+                <div class="skill-info">
+                    <h3>Python</h3>
+                    <span>Data Science &amp; Automation</span>
+                </div>
+            </a>
+
+            <a href="unity.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-brands fa-unity"></i></div>
+                <div class="skill-info">
+                    <h3>Unity Engine</h3>
+                    <span>2D / 3D Game Development</span>
+                </div>
+            </a>
+
+            <a href="web development.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-brands fa-html5"></i></div>
+                <div class="skill-info">
+                    <h3>Web Development</h3>
+                    <span>HTML5, CSS3, JavaScript</span>
+                </div>
+            </a>
+
+            <a href="IoT developer.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-microchip"></i></div>
+                <div class="skill-info">
+                    <h3>IoT &amp; Electronics</h3>
+                    <span>ESP32, Microcontroller, Sensors</span>
+                </div>
+            </a>
+
+            <a href="Game programming.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-brands fa-csharp"></i></div>
+                <div class="skill-info">
+                    <h3>C# Game Programming</h3>
+                    <span>Game Mechanics &amp; Physics</span>
+                </div>
+            </a>
+
+            <a href="photograher.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-camera"></i></div>
+                <div class="skill-info">
+                    <h3>Photographer</h3>
+                    <span>งานโสตทัศนศึกษาและกิจกรรมโรงเรียน</span>
+                </div>
             </a>
         </div>
     </section>
-                <section>
-        <h1>เกมแก้ว่าง</h1>
-        <a href="pac-hololive.html" class="skill-badge">
-            <i class="fa-solid fa-gamepad"></i> PACHololive
-        </a>
+
+    <!-- ==========================================================================
+         LEISURE & INTERESTS
+         ========================================================================== -->
+    <section class="section">
+        <div class="section-header">
+            <span class="section-tag">Leisure &amp; Hobbies</span>
+            <h2 class="section-title">กิจกรรมยามว่างและความสนใจ</h2>
+        </div>
+
+        <div class="skills-grid">
+            <a href="game dev.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-laptop-code"></i></div>
+                <div class="skill-info">
+                    <h3>พัฒนาเกม</h3>
+                    <span>ออกแบบคอนเซ็ปต์และทดลองระบบ</span>
+                </div>
+            </a>
+
+            <a href="youtube.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-brands fa-youtube"></i></div>
+                <div class="skill-info">
+                    <h3>ทำช่อง YouTube</h3>
+                    <span>เผยแพร่ความรู้ด้านคอมพิวเตอร์</span>
+                </div>
+            </a>
+
+            <a href="game.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-gamepad"></i></div>
+                <div class="skill-info">
+                    <h3>เล่นเกม</h3>
+                    <span>ศึกษากลไกการเล่นและคลายเครียด</span>
+                </div>
+            </a>
+
+            <a href="pac-hololive.html" class="skill-card">
+                <div class="skill-icon-box"><i class="fa-solid fa-ghost"></i></div>
+                <div class="skill-info">
+                    <h3>PACHololive</h3>
+                    <span>มินิเกมคลายเครียดแก้ว่าง</span>
+                </div>
+            </a>
+        </div>
     </section>
 
-    <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+    <!-- ==========================================================================
+         CONTACT SECTION (CAGD.AS STYLE CTA)
+         ========================================================================== -->
+    <section id="contact" class="section">
+        <div class="contact-cta-wrapper">
+            <h2 class="cta-title">พร้อมสำหรับการพูดคุย<br>และร่วมสร้างสรรค์สิ่งใหม่</h2>
+            <p class="cta-desc">
+                ยินดีต้อนรับทุกการติดต่อ แลกเปลี่ยนความคิดเห็นด้านเทคโนโลยี โปรแกรมมิ่ง หรือร่วมงานโปรเจกต์
+            </p>
 
+            <div class="contact-cards-grid">
+                <a href="https://www.facebook.com/dnay.theph.s.tang" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <img src="https://i.postimg.cc/3xL1tPKN/com-facebook-katana-icon-2024-12-27-21-01-37.png" alt="Facebook">
+                    <div>
+                        <div class="contact-label">Facebook</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">ดนัยเทพ แซ่ตั้ง</div>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/danaitep_saetang_" target="_blank" rel="noopener noreferrer" class="contact-card">
+                    <img src="https://i.postimg.cc/xjmcg7Gn/Instagram-logo-2022-svg.png" alt="Instagram">
+                    <div>
+                        <div class="contact-label">Instagram</div>
+                        <div style="font-size: 0.85rem; color: var(--text-secondary);">@danaitep_saetang_</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                DANAITEP. <span>— High School Developer</span>
+            </div>
+            <div class="footer-copy">
+                แก้ไขล่าสุด: 11/19/2025 | ออกแบบและปรับปรุงสไตล์ cagd.as
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         SCRIPTS: LIVE CLOCK & MOBILE MENU
+         ========================================================================== -->
+    <script>
+        // Real-time ticking clock (Thailand UTC+7) like cagd.as
+        function updateClock() {
+            const clockEl = document.getElementById('hero-clock');
+            if (!clockEl) return;
+            const now = new Date();
+            const timeStr = now.toLocaleTimeString('en-US', {
+                timeZone: 'Asia/Bangkok',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: true
+            });
+            clockEl.textContent = timeStr;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Mobile Nav Toggle
+        const mobileBtn = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        if (mobileBtn && navMenu) {
+            mobileBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('open');
+            });
+        }
+    </script>
 </body>
 </html>
-

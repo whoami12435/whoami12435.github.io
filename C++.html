@@ -2,141 +2,102 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar */
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        /* Content */
-        .work-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-
-        .work-container img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .work-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 600px;
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Responsive */
-        @media (max-width: 800px) {
-            .work-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .work-container img {
-                width: 80%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ทักษะภาษา C++ — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ SKILLS</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link active">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html#skills" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าทักษะ
+            </a>
+        </div>
     </nav>
 
-    <div class="work-container">
-        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="เรียน Python">
-        <div class="work-text">
-            <h1>การเขียนโปรแกรมภาษา C++</h1>
-            <p>
-                ภาษา C++ เป็นภาษาที่ผมเริ่มเรียนตอนมัธยมปลาย หลังจากผ่านค่าย สอวน. ค่าย 1 แล้ว ผมได้มีโอกาสเรียนรู้ภาษา C++ เพิ่มเติมสำหรับการเรียนใน สอวน. ค่าย 2  
-                แม้ผมไม่สามารถผ่านเข้าค่าย 2 ได้สำเร็จ แต่ผมก็ยังคงสนใจและศึกษาภาษา C++ ต่อไป เนื่องจากภาษา C++ มีความซับซ้อนและมีฟีเจอร์ที่หลากหลายมากกว่าภาษา C
-                ทำให้เป็นภาษาที่ต้องการในตลาด
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Programming Skill</span>
+            <h1 class="section-title">การเขียนโปรแกรมภาษา C++</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การต่อยอดความรู้สู่ Competitive Programming และโครงสร้างข้อมูลระดับสูง
             </p>
         </div>
-    </div>
-        <div class="work-container">
-        <img src="https://i.postimg.cc/rsR4NFKj/Screenshot-2025-11-03-214706.png" alt="เรียน Python">
-        <div class="work-text">
-            <h1>ได้รับการเรียนรู้ภาษา C++</h1>
-            <p>
-                ผมได้การเรียนรู้ภาษา C++ จากอาจารย์ในค่าย สอวน. ค่าย 2 ซึ่งเนื้อหาที่ได้เรียนรู้จะเป็นการต่อยอดจากภาษา C ที่ผมได้เรียนรู้มาแล้ว
-                ทั้งในการเขียน vector, dynamicprogramming , binary tree และอื่น ๆ อีกมากมาย ซึ่งทำให้ผมมีพื้นฐานการเขียนโปรแกรมที่ดีขึ้น แม้ผมไม่สามารถผ่านไปเป็นผู้แทน เนื่องจากเป็นปีแรกที่ผมได้เข้าค่าย 2 และได้เรียนที่สถานที่ใหม่ 
-                ทำให้ผมเกิดอาการไม่คุ้นเคยและเกร็ง ทำให้กระผมเรียนตามไม่ทันได้แต่ หลังจากการเรียนค่าย ผมก็ยังคงศึกษาภาษา C++ ต่อไป
-        </div>
-    </div>  
+    </header>
 
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
+
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">การเรียนรู้ภาษา C++ ในระดับมัธยมปลาย</h2>
+                    <p class="work-summary">
+                        ภาษา C++ เป็นภาษาที่ผมเริ่มเรียนหลังจากผ่านค่าย สอวน. ค่าย 1 เพื่อเตรียมความพร้อมสำหรับค่าย 2 แม้เนื้อหาจะมีความซับซ้อนและท้าทายมากขึ้น แต่ด้วยประสิทธิภาพและความเร็วทำให้เป็นภาษาที่ผมชื่นชอบและตั้งใจศึกษาอย่างต่อเนื่อง
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ระดับ</h4>
+                            <p>มัธยมปลาย / สอวน.</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>ฟีเจอร์</h4>
+                            <p>OOP, STL, Fast I/O</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="ภาษา C++" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">การต่อยอดโครงสร้างข้อมูลและอัลกอริทึมในค่าย 2</h2>
+                    <p class="work-summary">
+                        ได้รับการถ่ายทอดความรู้จากอาจารย์ระดับมหาวิทยาลัยในค่าย สอวน. ค่าย 2 ครอบคลุมเนื้อหา Vectors, Dynamic Programming, Binary Trees และ Graph Theory ซึ่งเป็นรากฐานสำคัญของวิทยาการคอมพิวเตอร์
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>เนื้อหา</h4>
+                            <p>Data Structures &amp; Algorithms</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>หัวข้อสำคัญ</h4>
+                            <p>DP, Trees, Vectors, Recursion</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/rsR4NFKj/Screenshot-2025-11-03-214706.png" alt="สอวน. ค่าย 2 C++" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— C++ Programming</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
+        </div>
+    </footer>
+
 </body>
 </html>

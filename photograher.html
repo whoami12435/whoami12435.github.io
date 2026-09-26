@@ -2,133 +2,81 @@
 <html lang="th">
 <head>
     <meta charset="UTF-8">
-    <title>My Works</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: "Poppins", sans-serif;
-            margin: 0;
-            background: #eef2f7;
-            color: #333;
-        }
-
-        /* Header */
-        header {
-            background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC);
-            color: white;
-            padding: 25px 0;
-            text-align: center;
-            font-size: 28px;
-            font-weight: 600;
-            letter-spacing: 1px;
-        }
-
-        /* Navbar */
-        nav {
-            background: #1e1e2f;
-            padding: 12px 0;
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            background: #2f2f4a;
-            transform: translateY(-2px);
-        }
-
-        /* Content */
-        .work-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-            padding: 80px 10%;
-        }
-
-        .work-container img {
-            width: 360px;
-            border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            transition: 0.4s;
-        }
-
-        .work-container img:hover {
-            transform: scale(1.03);
-        }
-
-        .work-text {
-            max-width: 600px;
-        }
-
-        .work-text h1 {
-            color: #0052D4;
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-
-        .work-text p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            color: #777;
-            background: #f4f4f4;
-            border-top: 1px solid #ddd;
-        }
-
-        /* Responsive */
-        @media (max-width: 800px) {
-            .work-container {
-                flex-direction: column;
-                text-align: center;
-            }
-            .work-container img {
-                width: 80%;
-            }
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ช่างภาพ &amp; งานโสตทัศนศึกษา — Danai Thep</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cagdas-theme.css">
 </head>
 <body>
 
-    <header>🌐 My Portfolio</header>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="work.html">ผลงานด้านวิชาการ</a>
-        <a href="working project-1.html">Project กำลังพัฒนา</a>
-        <a href="goodguys.html">พลเมืองดี</a>
+    <nav class="site-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-brand">
+                DANAITEP<span class="brand-badge">/ SKILLS</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">หน้าแรก</a></li>
+                <li><a href="work.html" class="nav-link">ผลงานวิชาการ</a></li>
+                <li><a href="working project-1.html" class="nav-link">โปรเจกต์</a></li>
+                <li><a href="goodguys.html" class="nav-link">จิตสาธารณะ</a></li>
+                <li><a href="index.html#skills" class="nav-link active">ทักษะ</a></li>
+                <li><a href="index.html#contact" class="nav-link">ติดต่อ</a></li>
+            </ul>
+            <a href="index.html#skills" class="nav-cta">
+                <i class="fa-solid fa-arrow-left"></i> กลับหน้าทักษะ
+            </a>
+        </div>
     </nav>
 
-    <div class="work-container">
-        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="เรียน Python">
-        <div class="work-text">
-            <h1>ประฐานฝ่ายโสต</h1>
-            <p>
-                กระผมได้มีโอกาศได้ทำงานร่วมกับคณะฝ่ายโสตศึกษาของโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ในฐานะสมาชิก ตอนมัธยมศึกษาปีที่ 5 และได้รับเลือกตั้งเป็นประธานห้องโสตศึกษาตอนมัธยมศึกษาปีที่ 6
-                ในช่วงเวลาที่ผมอยู่ในฝ่ายโสต ผมได้มีส่วนร่วมในการจัดการและดูแลอุปกรณ์โสตทัศนูปกรณ์ต่าง ๆ ของโรงเรียน เช่น การติดตั้งเครื่องเสียง โปรเจ็กเตอร์ และอุปกรณ์อื่น ๆ ที่ใช้ในกิจกรรมการเรียนการสอน ผมได้เข้าร่วมในงานต่าง ๆ ที่ฝ่ายโสตมีส่วนร่วม เช่น การจัดกิจกรรมพิเศษ การประชุม และการสัมมนา งานกีฬาสี
-                ซึ่งหน้าที่หลักของผมคือการถ่ายรูปงานที่เกิดขึ้นต่าง,การดูแลอุปกรณ์โสตทัศนูปกรณ์ให้พร้อมใช้งาน และช่วยแก้ไขปัญหาที่เกิดขึ้นระหว่างการใช้งาน
+    <header class="section" style="padding-top: 60px; padding-bottom: 30px; border-top: none;">
+        <div class="section-header" style="margin-bottom: 20px;">
+            <span class="section-tag">Creative &amp; Media</span>
+            <h1 class="section-title">งานช่างภาพและโสตทัศนศึกษา</h1>
+            <p style="font-size: 1.15rem; color: var(--text-secondary); max-width: 700px; margin-top: 14px;">
+                การบันทึกภาพถ่าย การควบคุมระบบภาพและเสียง และการบริหารงานชุมนุมโสตทัศนศึกษา
+            </p>
         </div>
+    </header>
 
-    </div>  
+    <main class="section" style="padding-top: 20px;">
+        <div class="work-list">
 
-        <footer>แก้ไขล่าสุด 11/19/2025.</footer>
+            <article class="work-card">
+                <div class="work-info">
+                    <h2 class="work-heading">ประธานฝ่ายโสตทัศนศึกษา โรงเรียน จ.ภ. สตูล</h2>
+                    <p class="work-summary">
+                        กระผมได้มีโอกาสร่วมงานกับฝ่ายโสตศึกษาของโรงเรียนวิทยาศาสตร์จุฬาภรณราชวิทยาลัย สตูล ตั้งแต่ชั้น ม.5 และได้รับความไว้วางใจให้ดำรงตำแหน่งเป็นประธานห้องโสตศึกษาในชั้น ม.6 
+                    </p>
+                    <p class="work-summary" style="margin-top: 16px;">
+                        มีหน้าที่หลักในการดูแลและติดตั้งอุปกรณ์โสตทัศนูปกรณ์ เช่น ระบบเครื่องเสียง โปรเจกเตอร์ การถ่ายทอดสด และการบันทึกภาพถ่ายในกิจกรรมสำคัญ เช่น งานสัมมนา กิจกรรมวิชาการ และงานแข่งขันกีฬาสี ให้พร้อมใช้งานอย่างสมบูรณ์แบบ
+                    </p>
+                    <div class="work-meta-grid">
+                        <div class="work-meta-item">
+                            <h4>ตำแหน่ง</h4>
+                            <p>ประธานชุมนุมโสตทัศนศึกษา</p>
+                        </div>
+                        <div class="work-meta-item">
+                            <h4>หน้าที่</h4>
+                            <p>ช่างภาพ, ควบคุมเสียง, ซ่อมบำรุง</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="work-gallery">
+                    <div class="gallery-item">
+                        <img src="https://i.postimg.cc/T20DTCxN/Screenshot-2025-10-29-132619.png" alt="งานโสตทัศนศึกษา" loading="lazy">
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">DANAITEP. <span>— Media &amp; Audio Visual</span></div>
+            <div class="footer-copy">แก้ไขล่าสุด: 11/19/2025</div>
+        </div>
+    </footer>
 
 </body>
 </html>
- 
